@@ -1,0 +1,23 @@
+.img-logo {
+    width: 140px;
+    height: 70px;
+    /* width: 17%;
+    height: 17%; */
+}
+
+@media(min-width:992px){
+    .align-navbar{
+        justify-content: end;
+    }
+}
+
+@media(max-width: 992px) {
+    .container-img-navbar{
+        width: 200px;
+    }
+    .li-navbar-responsive{
+        visibility: hidden;
+        position: absolute;
+    }
+    
+}

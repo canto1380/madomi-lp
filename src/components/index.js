@@ -1,56 +1,37 @@
 import React from "react";
 // import AliceCarousel from "react-alice-carousel";
-import { Button, Container, Image, Row, Col } from "react-bootstrap";
+import { Container, Image, Row, Col } from "react-bootstrap";
 import { DownloadOutlined } from "@ant-design/icons";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faWhatsapp } from "@fortawesome/free-regular-svg-icons";
-// import {
-//   solid,
-//   regular,
-//   brands,
-// } from "@fortawesome/fontawesome-svg-core/import.macro";
+
 import "./index.css";
-import MadomiGrande from "../img/madomi-grande.png";
+
+import CarouselProductos from "./carouselProductos";
+import CarouselInicial from "./carouselInicial";
+
 import MadomiItalia from "../img/madomi-italia.png";
 import MadomiBienvenidos from "../img/madomi-bienvenidos.png";
 import Wsp from "../img/whatsapp.png";
 import pdf from "./pdf-prueba.pdf";
 
 const Index = () => {
-  // const handleDragStart = (e) => e.preventDefault();
-
-  // const items = [
-  //   <img
-  //     src={MadomiGrande}
-  //     onDragStart={handleDragStart}
-  //     role="presentation"
-  //     alt="carrousel"
-  //   />,
-  //   <img
-  //     src={MadomiItalia}
-  //     onDragStart={handleDragStart}
-  //     role="presentation"
-  //     alt="carrousel"
-  //   />,
-  //   <img
-  //     src={MadomiBienvenidos}
-  //     onDragStart={handleDragStart}
-  //     role="presentation"
-  //     alt="carrousel"
-  //   />,
-  // ];
 
   return (
     <Container fluid className="">
       <Row xs={1}>
-        <Button className="w-100 fs-5 fw-semibold btn-pedido" variant="dark">
-          <a href="https://wa.me/5493816686081" target="_blank" className="btn-pedido-text">
+        {/* <Button className="w-100 fs-5 fw-semibold btn-pedido" variant="dark">
+          <a href="https://wa.me/5493816686081" target="_blank" className="btn-pedido-text" rel="noopener noreferrer">
             Hace tu Pedido
           </a>
-        </Button>
+        </Button> */}
+      </Row>
+      <Row xs={12} className=''>
+        <CarouselInicial />
+        {/* <Image className="w-100 p-0" fluid src={MadomiGrande}></Image> */}
       </Row>
       <Row xs={12}>
-        <Image className="w-100 p-0" fluid src={MadomiGrande}></Image>
+        <section className="px-0 py-65">
+          <p className="px-0"></p>
+        </section>
       </Row>
       <Row xs={12} className="">
         <Image src={MadomiItalia} className="h-img-italia w-100 p-0"></Image>
@@ -94,9 +75,12 @@ const Index = () => {
       <Row xs={12} className="align-items-center">
         <section className="pt-5">
           <div className="text-center">
-            <h2>GALERIA DE PRODUCTOS</h2>
+            <h2>PRODUCTOS PRINCIPALES</h2>
             <hr className="wa"></hr>
           </div>
+        </section>
+        <section className='px-4 py-3'>
+          <CarouselProductos />
         </section>
       </Row>
       <Row xs={12}>
@@ -112,7 +96,6 @@ const Index = () => {
           </div>
         </section>
         <section>
-          {/* <AliceCarousel mouseTracking items={items} animationDuration={100} /> */}
         </section>
       </Row>
       <Row xs={12}>
@@ -185,6 +168,7 @@ const Index = () => {
               className="btn-wsp border-0 py-3 px-4 m-0"
               href="https://wa.me/5493816686081"
               target="_blank"
+              rel="noopener noreferrer"
             >
               {/* <span><i className="fa-brands fa-whatsapp-square whatsapp-icon btn-wsp-icon"></i></span> */}
               <span className="btn-wsp-span text-start">
@@ -215,11 +199,10 @@ const Index = () => {
         </Col>
         <Col xs={12} lg={6} className="">
           <div>
-            <iframe
+             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3561.0696754735254!2d-65.1976608848682!3d-26.805909995214662!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225d958843118b%3A0xea02eebd9c950933!2sMadomi%20Pastas!5e0!3m2!1ses-419!2sar!4v1656015756382!5m2!1ses-419!2sar"
-              width="w-100"
-              height="450"
-              loading="lazy"
+              className="w-100"
+              height="600"
               aria-hidden="false"
               title="madomi"
             ></iframe>

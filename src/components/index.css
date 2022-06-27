@@ -8,6 +8,16 @@
 .h-img-italia {
   height: 160px;
 }
+
+.carousel-inicial{
+  width: 100%;
+  height: 720px;
+}
+.img-carousel-inicial{
+  height: 85vh;
+  width: 100%;
+}
+
 .t-bienvenido {
   font-family: sans-serif;
   font-size: 32px;
@@ -47,8 +57,10 @@
 .btn-wsp {
   background-color: #455a64;
   border-radius: 7px;
+  color: transparent;
   display: flex;
   flex: 1 1 auto;
+  width: 285px;
 }
 .btn-wsp-icon {
   width: 35px;
@@ -91,11 +103,27 @@
   padding-bottom: 30px;
 }
 
+.item-carousel-prod {
+  height: 600px;
+  width: 450px;
+}
+.img-carousel-1 {
+  width: 100%;
+  height: 100%;
+}
 
 @media (max-width: 992px) {
   .img-bienvenido{
     width: 80%;
   }
+  .carousel-inicial{
+    height: 500px;
+  }
+  .img-carousel-inicial{
+    height: 500px;
+    width: 100%;
+  }
+
   .centrar-tit {
     text-align: center;
   }
@@ -104,5 +132,14 @@
   }
   .div-contacto {
     padding-bottom: 50px;
+  }
+}
+@media (max-width: 768px) {
+  .carousel-inicial{
+    height: 300px;
+  }
+  .img-carousel-inicial{
+    height: 300px;
+    width: 100%;
   }
 }
