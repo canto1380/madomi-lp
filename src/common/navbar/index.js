@@ -55,16 +55,3 @@ const Index = () => {
 };
 
 export default Index;
-
-{
-  /* <>
-  <Button variant="primary" onClick={() => setModalShow(true)}>
-    Launch vertically centered modal
-  </Button>
-
-  <MyVerticallyCenteredModal
-    show={modalShow}
-    onHide={() => setModalShow(false)}
-  />
-</>; */
-}
