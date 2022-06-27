@@ -11,7 +11,6 @@ import Logo from "../../img/madomi-grande-sf.png";
 
 const Index = () => {
   const [modalShow, setModalShow] = useState(false);
-
   return (
     <Navbar bg="light" variant="light" expand="lg">
       <Container fluid>
@@ -29,7 +28,7 @@ const Index = () => {
             </Nav.Link>
             <Nav.Link
               className="btn fw-bolder text-hover text-start"
-              href="/contacto"
+              href="contacto"
             >
               Contacto
             </Nav.Link>
