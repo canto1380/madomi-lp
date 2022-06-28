@@ -7,14 +7,13 @@ import "./index.css";
 
 import CarouselProductos from "./carouselProductos";
 import CarouselInicial from "./carouselInicial";
+import Contacto from "./Contacto";
 
 import MadomiItalia from "../img/madomi-italia.png";
 import MadomiBienvenidos from "../img/madomi-bienvenidos.png";
-import Wsp from "../img/whatsapp.png";
 import pdf from "./pdf-prueba.pdf";
 
 const Index = () => {
-
   return (
     <Container fluid className="">
       <Row xs={1}>
@@ -24,7 +23,7 @@ const Index = () => {
           </a>
         </Button> */}
       </Row>
-      <Row xs={12} className=''>
+      <Row xs={12} className="">
         <CarouselInicial />
         {/* <Image className="w-100 p-0" fluid src={MadomiGrande}></Image> */}
       </Row>
@@ -79,7 +78,7 @@ const Index = () => {
             <hr className="wa"></hr>
           </div>
         </section>
-        <section className='px-4 py-3'>
+        <section className="px-4 py-3">
           <CarouselProductos />
         </section>
       </Row>
@@ -95,8 +94,7 @@ const Index = () => {
             <hr className="wa"></hr>
           </div>
         </section>
-        <section>
-        </section>
+        <section></section>
       </Row>
       <Row xs={12}>
         <section className="px-0 py-65">
@@ -156,65 +154,18 @@ const Index = () => {
         </section>
       </Row>
       <Row xs={12}>
-        <Col xs={12} lg={6} className="div-contacto">
-          <section className="container w-75 pt-5">
-            <div className="centrar-tit">
-              <h2>CONTACTO</h2>
-              <hr className="wa"></hr>
-            </div>
-          </section>
-          <section className="container w-75 pt-media-2">
-            <a
-              className="btn-wsp border-0 py-3 px-4 m-0"
-              href="https://wa.me/5493816686081"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {/* <span><i className="fa-brands fa-whatsapp-square whatsapp-icon btn-wsp-icon"></i></span> */}
-              <span className="btn-wsp-span text-start">
-                <Image className="p-0 btn-wsp-icon" src={Wsp}></Image>
-              </span>
-              <span className="btn-wsp-text">Envianos un WhatsApp</span>
-            </a>
-          </section>
-          <section className="container w-75 pt-5">
-            <h4 className="tit-secon">Madomi Pastas</h4>
-            <div className="pt-4">
-              <span className="email-text text-secondary">
-                Rivadavia 1891, San Miguel de Tucumán, Tucumán, Argentina
-              </span>
-            </div>
-            <div className="pt-4">
-              <span className="email-text">madomipastas@gmail.com</span>
-            </div>
-          </section>
-          <section className="container w-75 pt-5">
-            <h4 className="tit-secon">Horarios</h4>
-            <div className="pt-4">
-              <span className="email-text text-secondary">
-                De Lunes a Viernes de 9:00 a 13:30 y de 17:00 a 20:00hs.
-              </span>
-            </div>
-          </section>
-        </Col>
-        <Col xs={12} lg={6} className="">
-          <div>
-             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3561.0696754735254!2d-65.1976608848682!3d-26.805909995214662!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225d958843118b%3A0xea02eebd9c950933!2sMadomi%20Pastas!5e0!3m2!1ses-419!2sar!4v1656015756382!5m2!1ses-419!2sar"
-              className="w-100"
-              height="600"
-              aria-hidden="false"
-              title="madomi"
-            ></iframe>
-            {/* <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14240.408879082126!2d-65.2072018!3d-26.8367009!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf8606cd659b8e3e4!2sRollingCode%20School!5e0!3m2!1ses!2sar!4v1605124610314!5m2!1ses!2sar"
-              className="w-100"
-              height="600"
-              aria-hidden="false"
-            ></iframe> */}
+        <Col xs={12} className='div-contacto'>
+        <section className="container w-75 pt-5">
+          <div className="centrar-tit text-center">
+            <h2 className='text-center'>CONTACTO</h2>
+            <hr className="wa"></hr>
           </div>
+        </section>
+
+        <Contacto />
         </Col>
       </Row>
+     
     </Container>
   );
 };

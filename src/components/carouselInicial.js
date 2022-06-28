@@ -8,7 +8,7 @@ import Tartas from '../img/carousel-inicial/tartas.jpg'
 
 const CarouselInicial = () => {
     return (
-        <Carousel variant="light" className='carousel-inicial px-0'>
+        <Carousel controls={true} fade={true} interval={5000} variant="light" className='carousel-inicial px-0'>
         <Carousel.Item>
           <img
             className="d-block img-carousel-inicial"

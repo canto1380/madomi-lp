@@ -15,7 +15,7 @@ const Index = () => {
           <h3>Envianos un mensaje</h3>
           <form action="">
             <div className="form-group py-2">
-              <label for="">Nombre y Apellido*</label>
+              <label htmlFor="">Nombre y Apellido*</label>
               <input
                 type="text"
                 placeholder="Juan Perez"
@@ -24,7 +24,7 @@ const Index = () => {
               ></input>
             </div>
             <div className="form-group py-2">
-              <label for="">Email*</label>
+              <label htmlFor="">Email*</label>
               <input
                 type="email"
                 placeholder="juanperez@gmail.com"
@@ -33,7 +33,7 @@ const Index = () => {
               ></input>
             </div>
             <div className="form-group py-2">
-              <label for="">Consulta*</label>
+              <label htmlFor="">Consulta*</label>
               <textarea
                 name=""
                 id=""
@@ -45,7 +45,7 @@ const Index = () => {
               ></textarea>
             </div>
             <div className="form-group form-check">
-              <input type="checkbox" className="form-check-input" checked />
+              <input type="checkbox" className="form-check-input" defaultChecked />
               <label className="form-check-label">
                 Suscribite a nuestras novedades
               </label>

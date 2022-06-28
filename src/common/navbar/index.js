@@ -12,17 +12,15 @@ import Logo from "../../img/madomi-grande-sf.png";
 const Index = () => {
   const [modalShow, setModalShow] = useState(false);
   return (
-    <Navbar bg="light" variant="light" expand="lg">
+    <Navbar fixed='top' bg="light" variant="light" expand="lg">
       <Container fluid>
-        <Navbar.Brand href="#" className="container-img-navbar">
+        <Navbar.Brand href="/" className="container-img-navbar">
           <Image src={Logo} className="img-logo"></Image>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll" className="align-navbar">
           <Nav className="me-0 my-2 my-lg-0" navbarScroll>
-            <Nav.Link className="btn fw-bolder text-hover text-start" href="/">
-              Inicio
-            </Nav.Link>
+            
             <Nav.Link className="btn fw-bolder text-hover text-start" href="">
               Productos
             </Nav.Link>
@@ -34,6 +32,9 @@ const Index = () => {
             </Nav.Link>
             <Nav.Link className="btn fw-bolder text-hover text-start" href="">
               Nosotros
+            </Nav.Link>
+            <Nav.Link className="btn fw-bolder text-hover text-start" href="/">
+              Distribuidores
             </Nav.Link>
             <Nav.Link
               className="btn fw-bolder text-hover text-start"

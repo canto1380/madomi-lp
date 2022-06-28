@@ -10,7 +10,9 @@
         justify-content: end;
     }
 }
-
+.mb-fixed {
+    margin-bottom: 50px;
+}
 @media(max-width: 992px) {
     .container-img-navbar{
         width: 200px;
@@ -19,5 +21,4 @@
         visibility: hidden;
         position: absolute;
     }
-    
 }
