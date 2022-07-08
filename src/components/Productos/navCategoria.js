@@ -1,9 +1,7 @@
 import React, { useEffect } from "react";
 import { Nav } from "react-bootstrap";
 const NavCategoria = () => {
-  const submitCategory = (cat) => {
-    console.log(cat);
-  };
+  
 
   const navbarSecundarioFijo = () => {
     const navbarr = document.getElementById("navbar-1");
