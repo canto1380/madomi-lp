@@ -21,7 +21,7 @@ const Index = () => {
         <Navbar.Collapse id="navbarScroll" className="align-navbar">
           <Nav className="me-0 my-2 my-lg-0" navbarScroll>
             
-            <Nav.Link className="btn fw-bolder text-hover text-start" href="">
+            <Nav.Link className="btn fw-bolder text-hover text-start" href="productos">
               Productos
             </Nav.Link>
             <Nav.Link
