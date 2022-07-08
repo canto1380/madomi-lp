@@ -9,9 +9,9 @@ import "../index.css";
 
 const Index = () => {
   return (
-    <Container fluid className="py-5">
+    <Container className="py-5">
       <article className="row justify-content-around">
-        <div className="col-sm-12 col-md-5 my-3">
+        <div className="col-sm-12 col-md-6 my-3">
           <h3>Envianos un mensaje</h3>
           <form action="">
             <div className="form-group py-2">
@@ -71,7 +71,7 @@ const Index = () => {
             </a>
           </div>
         </div>
-        <div className="col-sm-12 col-md-5 my-3 aa">
+        <div className="col-sm-12 col-md-6 my-3 aa">
           <img src={Logo} alt="Logo de la empresa" className="w-50" />
           <hr />
           <h6>Rivadavia 1891, San Miguel de Tucumán, Tucumán, Argentina</h6>
