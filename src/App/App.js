@@ -5,6 +5,7 @@ import Index from "../components";
 import Footer from "../common/footer";
 import Navbar from "../common/navbar";
 import Contacto from "../components/Contacto";
+import Productos from "../components/Productos";
 
 import '../components/index.css';
 
@@ -20,6 +21,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Index />}></Route>
             <Route path="/contacto" element={<Contacto />}></Route>
+            <Route path='/productos' element={<Productos />}></Route>
           </Routes>
           </div>
           <div>

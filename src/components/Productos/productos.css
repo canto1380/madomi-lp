@@ -1,0 +1,74 @@
+.mt-navbar{
+    margin-top: 106px;
+  }
+.img-inicial{
+    width: 100%;
+    height: 900px;
+  }
+
+
+/** Navbar Productos **/
+.py-navbar-secundario{
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.navbar-secundario{
+    position: fixed;
+    z-index: 100;
+    top:6.0rem;
+    width: 100%;
+    background:-webkit-radial-gradient(top, #8c8c8c, #e5e5e5);
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.nav-prod-text-scroll {
+    color: white;
+    font-weight: 400;
+}
+.nav-prod-text-scroll:hover {
+    color: rgb(176, 176, 176);
+}
+.text-size{
+    font-size: 24px;
+}
+.navbar-prod-text{
+    color: #3f4752;
+    font-weight: 400;
+}
+.navbar-prod-text:hover{
+    color: #119448;
+    font-weight: 400;
+}
+
+/* Titulo de cada categoria */
+.text-titulo{
+    font-size: 46px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: #119448;
+}
+.text-descripcion{
+    font-size: 20px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+}
+
+.card-product{
+    transition-duration: 300ms;
+}
+.card-product:hover{
+    transform: translate(-4px, -4px);
+}
+.img-product {
+    filter: saturate(85%);
+}
+.img-product:hover{
+    filter: saturate(140%);
+}
+.text-products {
+    color: #119448;
+}
+.text-description{
+    color: #3f4752
+}
