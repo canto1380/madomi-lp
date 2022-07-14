@@ -1,13 +1,13 @@
 import React from "react";
 
-import { Card, Button, Row, Col } from "react-bootstrap";
+import { Card, Row, Col } from "react-bootstrap";
 import './productos.css'
 import Noquis from '../../img/noquis.jpg'
 
 const ItemProductos = () => {
   return (
     <Row className="my-3 justify-content-center">
-      <Col xs={12} sm={6} lg={4} className='my-2'>
+      <Col xs={12} sm={6} lg={3} className='my-3 mx-3'>
         <Card className='card-product'>
           <Card.Img variant="top" src={Noquis} className='img-product'/>
           <Card.Body>
@@ -18,7 +18,7 @@ const ItemProductos = () => {
           </Card.Body>
         </Card>
       </Col>
-      <Col xs={12} sm={6} lg={4} className='my-2'>
+      <Col xs={12} sm={6} lg={3} className='my-3 mx-3'>
         <Card className='card-product'>
           <Card.Img variant="top" src={Noquis} className='img-product'/>
           <Card.Body>
@@ -29,7 +29,7 @@ const ItemProductos = () => {
           </Card.Body>
         </Card>
       </Col>
-      <Col xs={12} sm={6} lg={4} className='my-2'>
+      <Col xs={12} sm={6} lg={3} className='my-3 mx-3'>
         <Card className='card-product'>
           <Card.Img variant="top" src={Noquis} className='img-product'/>
           <Card.Body>
@@ -40,7 +40,7 @@ const ItemProductos = () => {
           </Card.Body>
         </Card>
       </Col>
-      <Col xs={12} sm={6} lg={4} className='my-2'>
+      <Col xs={12} sm={6} lg={3} className='my-3 mx-3'>
         <Card className='card-product'>
           <Card.Img variant="top" src={Noquis} className='img-product'/>
           <Card.Body>
