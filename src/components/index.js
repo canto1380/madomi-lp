@@ -25,7 +25,6 @@ const Index = () => {
       </Row>
       <Row xs={12} className="">
         <CarouselInicial />
-        {/* <Image className="w-100 p-0" fluid src={MadomiGrande}></Image> */}
       </Row>
       <Row xs={12}>
         <section className="px-0 py-65">

@@ -30,10 +30,10 @@ const Index = () => {
             >
               Contacto
             </Nav.Link>
-            <Nav.Link className="btn fw-bolder text-hover text-start" href="">
+            <Nav.Link className="btn fw-bolder text-hover text-start" href="nosotros">
               Nosotros
             </Nav.Link>
-            <Nav.Link className="btn fw-bolder text-hover text-start" href="/">
+            <Nav.Link className="btn fw-bolder text-hover text-start" href="distribuidores">
               Distribuidores
             </Nav.Link>
             <Nav.Link
