@@ -2,14 +2,17 @@ import React from "react";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import { Image } from "react-bootstrap";
-import Noquis from "../img/noquis.jpg";
-import Ravioles from "../img/ravioles.jpg";
-import Ravioles1 from "../img/ravioles1.jpg";
-import Sorrentinos from "../img/sorrentinos.jpg";
-import Tallarines from "../img/tallarines.jpg";
-import Tallarines1 from "../img/tallarines1.jpg";
-import Tallarines2 from "../img/tallarines2.jpg";
-import Tapas from "../img/tapas.png";
+import Noquis from "../img/productos/Pastas-frescas/noquis.jpg";
+import Ravioles from "../img/productos/Pastas-frescas/ravioles.jpg";
+import Ravioles1 from "../img/productos/Pastas-frescas/ravioles1.jpg";
+import Sorrentinos from "../img/productos/Pastas-frescas/sorrentinos.jpg";
+import Tallarines from "../img/productos/Tallarines/tallarines.jpg";
+import Tallarines1 from "../img/productos/Tallarines/tallarines1.png";
+import Tallarines2 from "../img/productos/Tallarines/tallarines2.png";
+import Tapas from "../img/productos/Tapas/Pascualinas Light.jpg";
+import Tapas1 from "../img/productos/Tapas/tapas empanadas.jpg";
+import Tapas2 from "../img/productos/Tapas/tapas tartas.jpg";
+import Tapas3 from "../img/productos/Tapas/tapas.png";
 
 const CarouselProductos = () => {
   const responsive = {
@@ -43,6 +46,15 @@ const CarouselProductos = () => {
     <div className="item-carousel-prod" data-value="5">
       <Image src={Tapas} className="img-carousel-1"></Image>
     </div>,
+    <div className="item-carousel-prod" data-value="5">
+      <Image src={Tapas1} className="img-carousel-1"></Image>
+    </div>,
+    <div className="item-carousel-prod" data-value="5">
+      <Image src={Tapas2} className="img-carousel-1"></Image>
+    </div>,
+    <div className="item-carousel-prod" data-value="5">
+      <Image src={Tapas3} className="img-carousel-1"></Image>
+    </div>,
   ];
   return (
     <AliceCarousel
@@ -50,7 +62,7 @@ const CarouselProductos = () => {
       animationDuration={1000}
       responsive={responsive}
       autoPlay={true}
-      autoPlayStrategy='default'
+      autoPlayStrategy="default"
       infinite={true}
       mouseTracking={true}
       touchTracking={true}

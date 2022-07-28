@@ -1,9 +1,7 @@
 import React, { useEffect } from "react";
 import { Nav } from "react-bootstrap";
 const NavCategoria = () => {
-  const submitCategory = (cat) => {
-    console.log(cat);
-  };
+  
 
   const navbarSecundarioFijo = () => {
     const navbarr = document.getElementById("navbar-1");
@@ -74,7 +72,7 @@ const NavCategoria = () => {
         <Nav.Item>
           <Nav.Link href="#divBombitas" eventKey="link-2">
             <span id="navbar-text4" className="navbar-prod-text">
-              Bombitas
+              Otros
             </span>
           </Nav.Link>
         </Nav.Item>

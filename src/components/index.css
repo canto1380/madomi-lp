@@ -1,5 +1,5 @@
 .mt-navbar{
-  margin-top: 96px;
+  margin-top: 90px;
 }
 
 .btn-pedido {
@@ -20,6 +20,7 @@
 .img-carousel-inicial{
   height: 85vh;
   width: 100%;
+  object-fit: fill;
 }
 
 .t-bienvenido {
@@ -116,6 +117,10 @@
   height: 100%;
 }
 
+.item-carousel-clientes {
+  width: 70px;
+}
+
 @media (max-width: 992px) {
   .img-bienvenido{
     width: 80%;
@@ -127,6 +132,10 @@
     height: 500px;
     width: 100%;
   }
+  .item-carousel-prod{
+    height: 500px;
+    width: 375px;
+  }
 
   .centrar-tit {
     text-align: center;
@@ -137,6 +146,13 @@
   .div-contacto {
     padding-bottom: 50px;
   }
+  .h-img-italia {
+    height: 100px;
+  }
+  .py-65{
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
 }
 @media (max-width: 768px) {
   .carousel-inicial{
@@ -146,4 +162,9 @@
     height: 300px;
     width: 100%;
   }
+  .item-carousel-prod{
+    height: 300px;
+    width: 200px;
+  }
+
 }

@@ -6,6 +6,8 @@ import Footer from "../common/footer";
 import Navbar from "../common/navbar";
 import Contacto from "../components/Contacto";
 import Productos from "../components/Productos";
+import Distribuidores from '../components/Distribuidores'
+import Nosotros from '../components/Nosotros'
 
 import '../components/index.css';
 
@@ -22,6 +24,8 @@ function App() {
             <Route path="/" element={<Index />}></Route>
             <Route path="/contacto" element={<Contacto />}></Route>
             <Route path='/productos' element={<Productos />}></Route>
+            <Route path='/distribuidores' element={<Distribuidores/>}></Route>
+            <Route path='/nosotros' element={<Nosotros/>}></Route>
           </Routes>
           </div>
           <div>
@@ -29,6 +33,9 @@ function App() {
           </div>
         </>
       </Router>
+      <script>
+      AOS.init();
+    </script>
     </div>
   );
 }

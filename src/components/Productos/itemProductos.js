@@ -1,52 +1,43 @@
 import React from "react";
 
-import { Card, Button, Row, Col } from "react-bootstrap";
+import { Card, Row, Col } from "react-bootstrap";
 import './productos.css'
-import Noquis from '../../img/noquis.jpg'
+import Tallarines from '../../img/productos/Tallarines/tallarines.jpg'
+import Tallarines1 from '../../img/productos/Tallarines/tallarines1.png'
+import Tallarines2 from '../../img/productos/Tallarines/tallarines2.png'
 
 const ItemProductos = () => {
   return (
     <Row className="my-3 justify-content-center">
-      <Col xs={12} sm={6} lg={4} className='my-2'>
-        <Card className='card-product'>
-          <Card.Img variant="top" src={Noquis} className='img-product'/>
+      <Col xs={12} sm={6} lg={3} className='my-3 mx-3'>
+        <Card className='border-0 card-product w-100'>
+          <Card.Img variant="top" src={Tallarines} className='img-product'/>
           <Card.Body>
-            <Card.Title className='text-center text-products'>Ñoquis x 500g.</Card.Title>
+            <Card.Title className='text-center text-products'>Tallerines x 500g</Card.Title>
             <Card.Text className='text-center fw-bold text-description'>
-              Papa
+              Morron
             </Card.Text>
           </Card.Body>
         </Card>
       </Col>
-      <Col xs={12} sm={6} lg={4} className='my-2'>
-        <Card className='card-product'>
-          <Card.Img variant="top" src={Noquis} className='img-product'/>
+      <Col xs={12} sm={6} lg={3} className='my-3 mx-3'>
+        <Card className='border-0 card-product'>
+          <Card.Img variant="top" src={Tallarines1} className='img-product img-width'/>
           <Card.Body>
-            <Card.Title className='text-center text-products'>Ñoquis x 500g.</Card.Title>
+            <Card.Title className='text-center text-products'>Tallarines x 500g</Card.Title>
             <Card.Text className='text-center fw-bold text-description'>
-              Papa
+              Huevo
             </Card.Text>
           </Card.Body>
         </Card>
       </Col>
-      <Col xs={12} sm={6} lg={4} className='my-2'>
-        <Card className='card-product'>
-          <Card.Img variant="top" src={Noquis} className='img-product'/>
+      <Col xs={12} sm={6} lg={3} className='my-3 mx-3'>
+        <Card className='border-0 card-product'>
+          <Card.Img variant="top" src={Tallarines2} className='img-product'/>
           <Card.Body>
-            <Card.Title className='text-center text-products'>Ñoquis x 500g.</Card.Title>
+            <Card.Title className='text-center text-products'>Tallarines x 500g.</Card.Title>
             <Card.Text className='text-center fw-bold text-description'>
-              Papa
-            </Card.Text>
-          </Card.Body>
-        </Card>
-      </Col>
-      <Col xs={12} sm={6} lg={4} className='my-2'>
-        <Card className='card-product'>
-          <Card.Img variant="top" src={Noquis} className='img-product'/>
-          <Card.Body>
-            <Card.Title className='text-center text-products'>Ñoquis x 500g.</Card.Title>
-            <Card.Text className='text-center fw-bold text-description'>
-              Papa
+              Espinaca
             </Card.Text>
           </Card.Body>
         </Card>
