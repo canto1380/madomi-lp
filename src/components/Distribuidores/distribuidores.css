@@ -1,7 +1,7 @@
 
 .ass{
     filter: invert(25%);
-    height: 1000px;
+    height: 1050px;
 }
 .text-img{
     position: absolute;
@@ -37,3 +37,21 @@
     background-color: rgba(0, 0, 0, 0.525);
     border-radius: 8px;
 }
+
+@media (max-width: 768px) {
+    .text-img-t{
+      font-size: 48px;
+    }
+    .text-img-d{
+        font-size: 16px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .text-img-t{
+      font-size: 42px;
+    }
+    .text-img-d{
+        font-size: 16px;
+    }
+  }

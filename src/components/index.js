@@ -11,7 +11,9 @@ import Contacto from "./Contacto";
 
 import MadomiItalia from "../img/madomi-italia.png";
 import MadomiBienvenidos from "../img/madomi-bienvenidos.png";
-import pdf from "./pdf-prueba.pdf";
+import listadoProductos from "./Listado-de-productos.xlsx";
+import Catalogo from "./FolletoMadomi.pdf";
+import CarouselClientes from "./carousellClientes";
 
 const Index = () => {
   return (
@@ -86,14 +88,16 @@ const Index = () => {
           <p className="px-0"></p>
         </section>
       </Row>
-      <Row xs={12}>
+      <Row xs={12} className="align-items-center">
         <section className="pt-5">
           <div className="text-center">
             <h2>CONFIAN EN NOSOTROS</h2>
             <hr className="wa"></hr>
           </div>
         </section>
-        <section></section>
+        <section className="px-4 py-3">
+          <CarouselClientes />
+        </section>
       </Row>
       <Row xs={12}>
         <section className="px-0 py-65">
@@ -108,44 +112,51 @@ const Index = () => {
           </div>
         </section>
       </Row>
-      <section className="container w-50 section-download">
-        <a
-          className="link-download-div-text"
-          href={pdf}
-          target="_blank"
-          rel="noopener noreferrer"
-          download="pdf-prueba.pdf"
-        >
-          <div className="row justify-content-between link-download p-3">
-            <div className="col-10">Catalogo Madomi(pdf)</div>
-            <div className="col-1 text-end">
-              <span>
-                <DownloadOutlined style={{ fontSize: "22px" }} />
-              </span>
-              {/* <span>Descargar</span> */}
-            </div>
+      <Row xs={12} md={6} className="justify-content-center mx-4">
+        <Col className="justify-content-center w-50 section-download">
+          <div>
+            <a
+              className="link-download-div-text"
+              href={Catalogo}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="row justify-content-between link-download p-3">
+                <div className="col-10">Catalogo Madomi(pdf)</div>
+                <div className="col-1 text-end">
+                  <span>
+                    <DownloadOutlined style={{ fontSize: "22px" }} />
+                  </span>
+                  {/* <span>Descargar</span> */}
+                </div>
+              </div>
+            </a>
           </div>
-        </a>
-      </section>
-      <section className="container w-50 section-download pt-1">
-        <a
-          className="link-download-div-text"
-          href={pdf}
-          target="_blank"
-          rel="noopener noreferrer"
-          download="pdf-prueba.pdf"
-        >
-          <div className="row justify-content-between link-download p-3">
-            <div className="col-10">Listado de Productos Madomi (xlsx)</div>
-            <div className="col-1 text-end fw-bolder">
-              <span>
-                <DownloadOutlined style={{ fontSize: "22px" }} />
-              </span>
-              {/* <span>Descargar</span> */}
-            </div>
+        </Col>
+      </Row>
+      <Row xs={12} md={6} className="justify-content-center mx-4">
+        <Col className="justify-content container w-50 section-download pt-1">
+          <div>
+            <a
+              className="link-download-div-text"
+              href={listadoProductos}
+              target="_blank"
+              rel="noopener noreferrer"
+              download="Listado-de-productos.xlsx"
+            >
+              <div className="row justify-content-between link-download p-3">
+                <div className="col-10">Listado de Productos Madomi (xlsx)</div>
+                <div className="col-1 text-end fw-bolder">
+                  <span>
+                    <DownloadOutlined style={{ fontSize: "22px" }} />
+                  </span>
+                  {/* <span>Descargar</span> */}
+                </div>
+              </div>
+            </a>
           </div>
-        </a>
-      </section>
+        </Col>
+      </Row>
 
       <Row xs={12}>
         <section className="px-0 py-65">
@@ -153,18 +164,17 @@ const Index = () => {
         </section>
       </Row>
       <Row xs={12}>
-        <Col xs={12} className='div-contacto'>
-        <section className="container w-75 pt-5">
-          <div className="centrar-tit text-center">
-            <h2 className='text-center'>CONTACTO</h2>
-            <hr className="wa"></hr>
-          </div>
-        </section>
+        <Col xs={12} className="div-contacto">
+          <section className="container w-75 pt-5">
+            <div className="centrar-tit text-center">
+              <h2 className="text-center">CONTACTO</h2>
+              <hr className="wa"></hr>
+            </div>
+          </section>
 
-        <Contacto />
+          <Contacto />
         </Col>
       </Row>
-     
     </Container>
   );
 };

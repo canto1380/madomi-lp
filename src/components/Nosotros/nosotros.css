@@ -1,3 +1,8 @@
+.img-fondo{
+	background-image: url("../../img/nosotros/fondo.webp");
+	width: 100%;
+}
+
 /* body {
 	background: #DCDFD9;
     font-family: 'Readex Pro', sans-serif;

@@ -1,16 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import { Image } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import Suscribirse from "../../components/suscripcion/suscribirse";
+// import Suscribirse from "../../components/suscripcion/suscribirse";
 
 import "./navbar.css";
 
 import Logo from "../../img/madomi-grande-sf.png";
 
 const Index = () => {
-  const [modalShow, setModalShow] = useState(false);
+  // const [modalShow, setModalShow] = useState(false);
   return (
     <Navbar fixed='top' bg="light" variant="light" expand="lg">
       <Container fluid>
@@ -21,6 +21,9 @@ const Index = () => {
         <Navbar.Collapse id="navbarScroll" className="align-navbar">
           <Nav className="me-0 my-2 my-lg-0" navbarScroll>
             
+          <Nav.Link className="btn fw-bolder text-hover text-start" href="/">
+              Inicio
+            </Nav.Link>
             <Nav.Link className="btn fw-bolder text-hover text-start" href="productos">
               Productos
             </Nav.Link>
@@ -36,7 +39,7 @@ const Index = () => {
             <Nav.Link className="btn fw-bolder text-hover text-start" href="distribuidores">
               Distribuidores
             </Nav.Link>
-            <Nav.Link
+            {/* <Nav.Link
               className="btn fw-bolder text-hover text-start"
               href=""
               onClick={() => setModalShow(true)}
@@ -46,7 +49,7 @@ const Index = () => {
             <Suscribirse show={modalShow} onHide={() => setModalShow(false)} />
             <Nav.Link className="btn fw-bolder text-hover text-start" href="">
               Iniciar Sesion
-            </Nav.Link>
+            </Nav.Link> */}
           </Nav>
         </Navbar.Collapse>
       </Container>
