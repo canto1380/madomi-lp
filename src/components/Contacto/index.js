@@ -1,5 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom'
 import { Container, Image } from "react-bootstrap";
+
+import emailjs from 'emailjs-com'
+
+import { scrollToTop } from "../../helpers/helpers";
+import { messageSendEmail, ErrorSendMail } from '../../helpers/messages'
+// import { onlyEmail } from "../../helpers/regularExpression";
 
 import Logo from "../../img/madomi-grande-sf.png";
 import Wsp from "../../img/whatsapp.png";
@@ -8,16 +15,60 @@ import "./contacto.css";
 import "../index.css";
 
 const Index = () => {
+  const navigate = useNavigate();
+
+
+
+  const [contacto, setContacto] = useState({
+    apeYNom: "",
+    email: "",
+    consulta: ""
+  })
+
+
+  const handleValores = (e)=>{
+    setContacto({...contacto, [e.target.name]: e.target.value})
+  }
+  
+  const handleContacto = (e) => {
+    e.preventDefault()
+
+
+    const mensajeContacto = {
+      nombre: contacto.apeYNom,
+      email: contacto.email,
+      consulta: contacto.consulta
+    }
+    
+    emailjs.send('service_1ng5el9','template_jqumwme',mensajeContacto, '6Eo-HKD7OTixioYCw')
+      .then(
+        (result) => {
+          if (result.status === 200) {
+            e.target.reset()
+            messageSendEmail()
+            navigate("/");
+            scrollToTop()
+          }
+        },
+          (error) => {
+            ErrorSendMail()
+          }
+        
+      )
+  }
+
   return (
     <Container className="py-5">
       <article className="row justify-content-around">
         <div className="col-sm-12 col-md-6 my-3">
           <h3>Envianos un mensaje</h3>
-          <form action="">
+          <form action="" href='/' onSubmit={handleContacto}>
             <div className="form-group py-2">
               <label htmlFor="">Nombre y Apellido*</label>
               <input
                 type="text"
+                name='apeYNom'
+                onChange={handleValores}
                 placeholder="Juan Perez"
                 required
                 className="form-control"
@@ -27,6 +78,8 @@ const Index = () => {
               <label htmlFor="">Email*</label>
               <input
                 type="email"
+                name='email'
+                onChange={handleValores}
                 placeholder="juanperez@gmail.com"
                 required
                 className="form-control"
@@ -35,7 +88,8 @@ const Index = () => {
             <div className="form-group py-2">
               <label htmlFor="">Consulta*</label>
               <textarea
-                name=""
+                name="consulta"
+                onChange={handleValores}
                 id=""
                 cols="30"
                 rows="4"
