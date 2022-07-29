@@ -8,7 +8,6 @@ import Tapas from "./Tapas";
 import Otros from './Otros'
 import "./productos.css";
 
-// import ProductosInicial from "../../img/productos/principal-v1.png";
 import ProductosInicial from "../../img/productos/principal-v3.png";
 
 const Productos = () => {

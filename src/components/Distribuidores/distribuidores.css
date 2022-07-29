@@ -1,57 +1,58 @@
-
-.ass{
-    filter: invert(25%);
-    height: 1050px;
+.ass {
+  filter: invert(25%);
+  height: 1050px;
 }
-.text-img{
-    position: absolute;
-    top: 10rem;
+.text-img {
+  position: absolute;
+  top: 10rem;
 }
-.text-img-t{
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 56px;
-    color: rgb(255, 255, 255);
-    font-weight: 700;
-    padding-bottom: 20px;
+.text-img-t {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 56px;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  padding-bottom: 20px;
 }
-.text-img-d{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 22px;
-    color: white;
+.text-img-d {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 22px;
+  color: white;
 }
 
 .form-img {
-    position: absolute;
-    top: 30rem;
+  position: absolute;
+  top: 30rem;
 }
 
-.text-form{
-    font-weight:700;
-    font-size: 16px;
-    color: white;
-    font-family:Georgia, 'Times New Roman', Times, serif;
+.text-form {
+  font-weight: 700;
+  font-size: 16px;
+  color: white;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-.col-form{
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.525);
-    border-radius: 8px;
+.col-form {
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.525);
+  border-radius: 8px;
 }
 
 @media (max-width: 768px) {
-    .text-img-t{
-      font-size: 48px;
-    }
-    .text-img-d{
-        font-size: 16px;
-    }
+  .text-img-t {
+    font-size: 42px;
   }
+  .text-img-d {
+    font-size: 16px;
+  }
+}
 
-  @media (max-width: 768px) {
-    .text-img-t{
-      font-size: 42px;
+@media (max-width: 576px) {
+    .text-img-t {
+        font-size:38px;
     }
-    .text-img-d{
-        font-size: 16px;
+    .text-img-d {
+        font-size: 14px;
     }
-  }
+}
