@@ -26,6 +26,7 @@ function App() {
             <Route exact path='/productos' element={<Productos />}></Route>
             <Route exact path='/distribuidores' element={<Distribuidores/>}></Route>
             <Route exact path='/nosotros' element={<Nosotros/>}></Route>
+            <Route exact path="*" element={<Index/>}></Route>
           </Routes>
           </div>
           <div>
