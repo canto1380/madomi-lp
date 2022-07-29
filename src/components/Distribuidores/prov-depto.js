@@ -1,9 +1,30 @@
-const provincias = [
-    {'id':'1', 'nombre': 'Tucuman', 'deptos':[{'id':'111','depto':'Capital'}, {'id':'21','depto':'Banda del Rio Sali'}, {'id':'31','depto':'Alberdi'}]},
-    {'id':'2', 'nombre': 'Salta', 'deptos':[{'id':'41','depto':'Capital-1'}, {'id':'51','depto':'Capital-11'}, {'id':'6','depto':'Capital-111'}]},
-    {'id':'3', 'nombre': 'Jujuy', 'deptos':[{'id':'7','depto':'Capital-2'}, {'id':'8','depto':'Capital-22'}, {'id':'9','depto':'Capital-222'}]},
-    {'id':'4', 'nombre': 'Santiago del Estero', 'deptos':[{'id':'10','depto':'Capital'}, {'id':'11','depto':'Capital'}, {'id':'12','depto':'Capital'}]},
-    {'id':'5', 'nombre': 'Catamarca', 'deptos':[{'id':'13','depto':'Capital-3'}, {'id':'14','depto':'Capital-33'}, {'id':'15','depto':'Capital-333'}]}
+export const provincias = [
+    {'id':1, 'nombre': 'Tucuman'},
+    {'id':2, 'nombre': 'Salta'},
+    {'id':3, 'nombre': 'Jujuy'},
+    {'id':4, 'nombre': 'Santiago del Estero'},
+    {'id':5, 'nombre': 'Catamarca'}
 ]
 
-export default provincias;
+export const deptos = [
+    {'id':1, 'idProvincia': 1, 'depto':'Capital'},
+    {'id':2, 'idProvincia': 1, 'depto':'Banda del Rio Sali'},
+    {'id':3, 'idProvincia': 1, 'depto':'Alberdi'},
+    {'id':4, 'idProvincia': 2, 'depto':'Capital2'},
+    {'id':5, 'idProvincia': 2, 'depto':'Banda del Rio Sali2'},
+    {'id':6, 'idProvincia': 2, 'depto':'Alberdi2'},
+    {'id':7, 'idProvincia': 3, 'depto':'Capital3'},
+    {'id':8, 'idProvincia': 3, 'depto':'Banda del Rio Sali3'},
+    {'id':9, 'idProvincia': 3, 'depto':'Alberdi3'},
+    {'id':10, 'idProvincia': 4, 'depto':'Capital4'},
+    {'id':11, 'idProvincia': 4, 'depto':'Banda del Rio Sali4'},
+    {'id':12, 'idProvincia': 4, 'depto':'Alberdi4'},
+    {'id':13, 'idProvincia': 5, 'depto':'Capital5'},
+    {'id':14, 'idProvincia': 5, 'depto':'Banda del Rio Sali5'},
+    {'id':15, 'idProvincia': 5, 'depto':'Alberdi5'}
+]
+
+    // const aa = provincias.find(ass => ass.nombre = 'Tucuman')
+    // console.log(aa)
+
+// export default provincias;
