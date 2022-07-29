@@ -97,3 +97,13 @@
     font-size: 20px;
   }
 }
+
+@media (max-width: 400px) {
+  .nav-prod-text-scroll {
+    font-size: 14px;
+  }
+  .navbar-prod-text{
+    font-size: 14px;
+  }
+  
+}

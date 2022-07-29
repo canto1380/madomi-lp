@@ -10,7 +10,8 @@ const NavCategoria = () => {
     const navbarText3 = document.getElementById("navbar-text3");
     const navbarText4 = document.getElementById("navbar-text4");
 
-    let ancho = window.screen.height;
+    let ancho = window.screen.width;
+    console.log(ancho)
 
     let positionX = 0;
     window.onscroll = () => {
