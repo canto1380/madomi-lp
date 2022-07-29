@@ -10,9 +10,34 @@ const NavCategoria = () => {
     const navbarText3 = document.getElementById("navbar-text3");
     const navbarText4 = document.getElementById("navbar-text4");
 
+    let ancho = window.screen.height;
+
     let positionX = 0;
     window.onscroll = () => {
       positionX = document.documentElement.scrollTop;
+      if(ancho < 500) {
+        if (positionX > 560) {
+          navbarr.classList.add("navbar-secundario");
+          navbarText1.classList.add("nav-prod-text-scroll");
+          navbarText1.classList.remove("navbar-prod-text");
+          navbarText2.classList.add("nav-prod-text-scroll");
+          navbarText2.classList.remove("navbar-prod-text");
+          navbarText3.classList.add("nav-prod-text-scroll");
+          navbarText3.classList.remove("navbar-prod-text");
+          navbarText4.classList.add("nav-prod-text-scroll");
+          navbarText4.classList.remove("navbar-prod-text");
+        } else {
+          navbarText1.classList.add("navbar-prod-text");
+          navbarText2.classList.add("navbar-prod-text");
+          navbarText3.classList.add("navbar-prod-text");
+          navbarText4.classList.add("navbar-prod-text");
+          navbarr.classList.remove("navbar-secundario");
+          navbarText1.classList.remove("nav-prod-text-scroll");
+          navbarText2.classList.remove("nav-prod-text-scroll");
+          navbarText3.classList.remove("nav-prod-text-scroll");
+          navbarText4.classList.remove("nav-prod-text-scroll");
+        }
+      }
       if (positionX > 911) {
         navbarr.classList.add("navbar-secundario");
         navbarText1.classList.add("nav-prod-text-scroll");
@@ -36,6 +61,7 @@ const NavCategoria = () => {
       }
     };
   };
+  
 
   useEffect(() => {
     navbarSecundarioFijo();
@@ -72,7 +98,7 @@ const NavCategoria = () => {
         <Nav.Item>
           <Nav.Link href="#divBombitas" eventKey="link-2">
             <span id="navbar-text4" className="navbar-prod-text">
-              Otros
+              Nuevos
             </span>
           </Nav.Link>
         </Nav.Item>

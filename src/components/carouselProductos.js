@@ -17,8 +17,8 @@ import Tapas3 from "../img/productos/Tapas/tapas.png";
 const CarouselProductos = () => {
   const responsive = {
     0: { items: 1 },
-    568: { items: 2 },
-    1024: { items: 3 },
+    250: { items: 2 },
+    500: { items: 3 },
   };
 
   const items = [

@@ -168,3 +168,14 @@
   }
 
 }
+@media(max-width: 576px) {
+  .img-carousel-1 {
+    width: 70%;
+    height: 70%;
+  }
+  .p-bienvenido {
+    font-family: sans-serif;
+    font-size: 20px;
+    font-style: normal;
+  }
+}

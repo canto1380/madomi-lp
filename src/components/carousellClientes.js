@@ -24,10 +24,10 @@ import Tatito from "../img/carousel-clientes/Tatito.jpg";
 const CarouselClientes = () => {
   const responsive = {
     0: { items: 1 },
-    70: { items: 2 },
-    140: { items: 3 },
-    210: { items: 4 },
-    280: { items: 5 },
+    150: { items: 2 },
+    300: { items: 3 },
+    450: { items: 4 },
+    600: { items: 5 },
   };
 
   const items = [
