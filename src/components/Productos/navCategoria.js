@@ -17,7 +17,9 @@ const NavCategoria = () => {
     window.onscroll = () => {
       positionX = document.documentElement.scrollTop;
       if(ancho < 500) {
-        if (positionX > 560) {
+        console.log('si 1')
+        if (positionX > 500) {
+          console.log('si 2')
           navbarr.classList.add("navbar-secundario");
           navbarText1.classList.add("nav-prod-text-scroll");
           navbarText1.classList.remove("navbar-prod-text");
@@ -38,27 +40,28 @@ const NavCategoria = () => {
           navbarText3.classList.remove("nav-prod-text-scroll");
           navbarText4.classList.remove("nav-prod-text-scroll");
         }
-      }
-      if (positionX > 911) {
-        navbarr.classList.add("navbar-secundario");
-        navbarText1.classList.add("nav-prod-text-scroll");
-        navbarText1.classList.remove("navbar-prod-text");
-        navbarText2.classList.add("nav-prod-text-scroll");
-        navbarText2.classList.remove("navbar-prod-text");
-        navbarText3.classList.add("nav-prod-text-scroll");
-        navbarText3.classList.remove("navbar-prod-text");
-        navbarText4.classList.add("nav-prod-text-scroll");
-        navbarText4.classList.remove("navbar-prod-text");
-      } else {
-        navbarText1.classList.add("navbar-prod-text");
-        navbarText2.classList.add("navbar-prod-text");
-        navbarText3.classList.add("navbar-prod-text");
-        navbarText4.classList.add("navbar-prod-text");
-        navbarr.classList.remove("navbar-secundario");
-        navbarText1.classList.remove("nav-prod-text-scroll");
-        navbarText2.classList.remove("nav-prod-text-scroll");
-        navbarText3.classList.remove("nav-prod-text-scroll");
-        navbarText4.classList.remove("nav-prod-text-scroll");
+      } else{
+        if (positionX > 911) {
+          navbarr.classList.add("navbar-secundario");
+          navbarText1.classList.add("nav-prod-text-scroll");
+          navbarText1.classList.remove("navbar-prod-text");
+          navbarText2.classList.add("nav-prod-text-scroll");
+          navbarText2.classList.remove("navbar-prod-text");
+          navbarText3.classList.add("nav-prod-text-scroll");
+          navbarText3.classList.remove("navbar-prod-text");
+          navbarText4.classList.add("nav-prod-text-scroll");
+          navbarText4.classList.remove("navbar-prod-text");
+        } else {
+          navbarText1.classList.add("navbar-prod-text");
+          navbarText2.classList.add("navbar-prod-text");
+          navbarText3.classList.add("navbar-prod-text");
+          navbarText4.classList.add("navbar-prod-text");
+          navbarr.classList.remove("navbar-secundario");
+          navbarText1.classList.remove("nav-prod-text-scroll");
+          navbarText2.classList.remove("nav-prod-text-scroll");
+          navbarText3.classList.remove("nav-prod-text-scroll");
+          navbarText4.classList.remove("nav-prod-text-scroll");
+        }
       }
     };
   };
