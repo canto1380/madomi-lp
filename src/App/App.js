@@ -21,11 +21,11 @@ function App() {
           </div>
           <div className='mt-navbar'>
           <Routes>
-            <Route path="/" element={<Index />}></Route>
-            <Route path="/contacto" element={<Contacto />}></Route>
-            <Route path='/productos' element={<Productos />}></Route>
-            <Route path='/distribuidores' element={<Distribuidores/>}></Route>
-            <Route path='/nosotros' element={<Nosotros/>}></Route>
+            <Route exact path="/" element={<Index />}></Route>
+            <Route exact path="/contacto" element={<Contacto />}></Route>
+            <Route exact path='/productos' element={<Productos />}></Route>
+            <Route exact path='/distribuidores' element={<Distribuidores/>}></Route>
+            <Route exact path='/nosotros' element={<Nosotros/>}></Route>
           </Routes>
           </div>
           <div>
