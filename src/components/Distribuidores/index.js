@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom'
 import { Col, Container, Image, Row, Form, Button } from "react-bootstrap";
 
@@ -8,7 +8,7 @@ import { scrollToTop } from "../../helpers/helpers";
 import { messageSendEmail, ErrorSendMail } from '../../helpers/messages'
 
 import Distribuidores from "../../img/distribuidores/distribuidores2.jpeg";
-import Provincias from "./prov-depto";
+import { provincias, deptos } from "./prov-depto";
 
 import "./distribuidores.css";
 
@@ -22,9 +22,10 @@ const Index = () => {
     provincia: "",
     localidad: "",
   });
-  const [provincias, setProvincias] = useState([]);
-  const [provinciaSelect, setProvinciaSelect] = useState("");
+  const [provinciaSelect, setProvinciaSelect] = useState();
   const [localidadSelect, setLocalidadSelect] = useState("");
+
+  console.log(provincias, deptos)
 
   const handleValores = (e) => {
     setDistribuidor({ ...distribuidor, [e.target.name]: e.target.value });
@@ -40,15 +41,16 @@ const Index = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+   
     const distribuidorContacto = {
       apellido: distribuidor.apellido,
       nombre: distribuidor.nombre,
       telefono: distribuidor.telefono,
       email: distribuidor.email,
-      provincia: provinciaSelect,
+      provincia: (Number.parseInt(provinciaSelect) === 1) ? ('Tucuman') : (Number.parseInt(provinciaSelect) === 2) ? ('Salta') : (Number.parseInt(provinciaSelect) === 3) ? ('Jujuy') : (Number.parseInt(provinciaSelect) === 4) ? ('Santiago del Estero') : ('Catamarca'),
       localidad: localidadSelect,
     };
-
+    console.log(distribuidorContacto)
     emailjs.send('service_1ng5el9','template_u46fh44',distribuidorContacto, '6Eo-HKD7OTixioYCw')
       .then(
         (result) => {
@@ -65,14 +67,6 @@ const Index = () => {
         
       )
   };
-
-  useEffect(() => {
-    try {
-      setProvincias(Provincias);
-    } catch (error) {
-      console.log(error);
-    }
-  }, []);
 
   return (
     <Container fluid className="px-0 py-0">
@@ -158,10 +152,10 @@ const Index = () => {
                 aria-label="Default select example"
                 onChange={handleProvincia}
               >
-                <option key="-">Seleccione</option>
+              <option key="-">Seleccione</option>
                 {provincias.map((prov) => {
                   return (
-                    <option className="" key={prov.id} value={prov.nombre}>
+                    <option className="" key={prov.id} value={prov.id}>
                       {prov.nombre}
                     </option>
                   );
@@ -175,17 +169,18 @@ const Index = () => {
                 onChange={handleLocalidad}
               >
                 <option key="--">Seleccione</option>
-                {provincias.map((prov) => {
-                  if (prov.nombre === provinciaSelect) {
-                    return prov.deptos.map((dpto) => {
-                      return (
-                        <option className="" key={dpto.id} value={dpto.depto}>
-                          {dpto.depto}
-                        </option>
-                      );
-                    });
-                  }
-                })}
+                {
+                  deptos.map((depto) => {
+                    if(Number.parseInt(provinciaSelect) === depto.idProvincia) {
+                      return(
+                        <option key={depto.id} value={depto.depto} >{depto.depto}</option>
+                      )
+                    } else {
+                      return null
+                    }
+                  })
+                }
+
               </Form.Select>
               <Button type="submit" className="my-4 w-100 fw-bold">
                 Enviar solicitud
@@ -199,25 +194,3 @@ const Index = () => {
 };
 
 export default Index;
-
-/*{provincias.forEach((prov) => {
-              console.log(prov)
-              if (prov.nombre === provinciaSelect) {
-                return (
-                  <Form.Select
-                    aria-label="Default select example"
-                    onChange={handleLocalidad}
-                  >
-                    <option key="--">Seleccione</option>
-                    {prov.deptos.map((dpto) => {
-                      return (
-                        <option className="" key={dpto.id} value={dpto.depto}>
-                          {dpto.depto}
-                        </option>
-                      );
-                    })}
-                  </Form.Select>
-                );
-              }
-            })}
-            */
