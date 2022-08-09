@@ -25,7 +25,8 @@ const Index = () => {
   const [provinciaSelect, setProvinciaSelect] = useState();
   const [localidadSelect, setLocalidadSelect] = useState("");
 
-  console.log(provincias, deptos)
+  console.log(distribuidor)
+  // console.log(provincias, deptos)
 
   const handleValores = (e) => {
     setDistribuidor({ ...distribuidor, [e.target.name]: e.target.value });
@@ -50,7 +51,6 @@ const Index = () => {
       provincia: (Number.parseInt(provinciaSelect) === 1) ? ('Tucuman') : (Number.parseInt(provinciaSelect) === 2) ? ('Salta') : (Number.parseInt(provinciaSelect) === 3) ? ('Jujuy') : (Number.parseInt(provinciaSelect) === 4) ? ('Santiago del Estero') : ('Catamarca'),
       localidad: localidadSelect,
     };
-    console.log(distribuidorContacto)
     emailjs.send('service_1ng5el9','template_u46fh44',distribuidorContacto, '6Eo-HKD7OTixioYCw')
       .then(
         (result) => {

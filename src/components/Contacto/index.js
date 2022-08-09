@@ -132,7 +132,8 @@ const Index = () => {
           <h6>Email: madomipastas@gmail.com</h6>
           <h6>Horarios de atención:</h6>
           <ul>
-            <li>De Lunes a Viernes de 9:00 a 13:30 y de 17:00 a 20:00hs.</li>
+            <li>De Lunes a Viernes de 9:00 a 13:30 y de 16:00 a 19:00hs.</li>
+            <li>Sábados de 9 a 14:00hs.</li>
           </ul>
           <div>
             <iframe

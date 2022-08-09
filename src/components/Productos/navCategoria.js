@@ -102,7 +102,7 @@ const NavCategoria = () => {
         <Nav.Item>
           <Nav.Link href="#divBombitas" eventKey="link-2">
             <span id="navbar-text4" className="navbar-prod-text">
-              Nuevos
+              Tacos
             </span>
           </Nav.Link>
         </Nav.Item>

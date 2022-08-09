@@ -9,10 +9,8 @@ import Sorrentinos from "../img/productos/Pastas-frescas/sorrentinos.jpg";
 import Tallarines from "../img/productos/Tallarines/tallarines.jpg";
 import Tallarines1 from "../img/productos/Tallarines/tallarines1.png";
 import Tallarines2 from "../img/productos/Tallarines/tallarines2.png";
-import Tapas from "../img/productos/Tapas/Pascualinas Light.jpg";
 import Tapas1 from "../img/productos/Tapas/tapas empanadas.jpg";
 import Tapas2 from "../img/productos/Tapas/tapas tartas.jpg";
-import Tapas3 from "../img/productos/Tapas/tapas.png";
 
 const CarouselProductos = () => {
   const responsive = {
@@ -44,16 +42,10 @@ const CarouselProductos = () => {
       <Image src={Tallarines2} className="img-carousel-1"></Image>
     </div>,
     <div className="item-carousel-prod" data-value="5">
-      <Image src={Tapas} className="img-carousel-1"></Image>
-    </div>,
-    <div className="item-carousel-prod" data-value="5">
       <Image src={Tapas1} className="img-carousel-1"></Image>
     </div>,
     <div className="item-carousel-prod" data-value="5">
       <Image src={Tapas2} className="img-carousel-1"></Image>
-    </div>,
-    <div className="item-carousel-prod" data-value="5">
-      <Image src={Tapas3} className="img-carousel-1"></Image>
     </div>,
   ];
   return (

@@ -18,7 +18,7 @@ const Otros = () => {
               Pascualina Light x 2Ud
             </Card.Title>
             <Card.Text className="text-center fw-bold text-description">
-              Papa
+              
             </Card.Text>
           </Card.Body>
         </Card>
