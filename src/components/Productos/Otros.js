@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Card, Row, Col } from "react-bootstrap";
 import './productos.css'
-import Nachos from '../../img/productos/Otros/Masa para Tacos.jpg'
+// import Nachos from '../../img/productos/Otros/Masa para Tacos.jpg'
 // import Ravioles from '../../img/productos/Tapas/tapas empanadas.jpg'
 // import Ravioles1 from '../../img/productos/Tapas/tapas tartas.jpg'
 // import Sorrentinos from '../../img/productos/Tapas/tapas.png'
@@ -15,7 +15,7 @@ const Otros = () => {
           <Card.Img variant="top" src={Nachos} className="img-product" />
           <Card.Body>
             <Card.Title className="text-center text-products">
-              Pascualina Light x 2Ud
+              Masa para Tacos
             </Card.Title>
             <Card.Text className="text-center fw-bold text-description">
               

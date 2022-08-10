@@ -5,6 +5,7 @@ import './productos.css'
 import Noquis from '../../img/productos/Tapas/Pascualinas Light.jpg'
 import Ravioles from '../../img/productos/Tapas/tapas empanadas.jpg'
 import Ravioles1 from '../../img/productos/Tapas/tapas tartas.jpg'
+import Nachos from '../../img/productos/Otros/Masa para Tacos.jpg'
 
 const Tapas = () => {
   return (
@@ -48,6 +49,19 @@ const Tapas = () => {
             </Card.Title>
             <Card.Text className="text-center fw-bold text-description">
               Criolla - Hojaldre
+            </Card.Text>
+          </Card.Body>
+        </Card>
+      </Col>
+      <Col xs={12} sm={6} lg={3} className="my-3 mx-3 mb-5">
+        <Card className="border-0 card-product w-100">
+          <Card.Img variant="top" src={Nachos} className="img-product" />
+          <Card.Body>
+            <Card.Title className="text-center text-products">
+              Masa para Tacos
+            </Card.Title>
+            <Card.Text className="text-center fw-bold text-description">
+              
             </Card.Text>
           </Card.Body>
         </Card>
