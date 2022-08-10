@@ -57,7 +57,7 @@ const Index = () => {
             <h2 className="font-t-3 text-center">Nuestra Misión</h2>
             <div className="my-4">
               <p className="font-d-3 mx-0 my-0">
-                Posicionar a Don Yeyo entre las principales empresas de
+                Posicionar a Madomi Pastas entre las principales empresas de
                 elaboración de alimentos derivados del trigo a nivel nacional,
                 con innovación constante en el desarrollo de productos,
                 optimización de los procesos de fabricación y certificaciones
