@@ -12,7 +12,10 @@ const Index = () => {
             <h1 className="font-t text-center my-0">30 AÑOS</h1>
             <p className="font-st text-center">De Tradicion</p>
             <p className="font-d text-center py-3 my-0">
-              Breve descripcion de como empezo
+              Somos una Empresa dedicada a la fabricación de Pastas Frescas
+              desde 1995. Nacimos en la ciudad de San Miguel de Tucumán,
+              Tucumán, Argentina con la misión de acercar a tu mesa Frescura y
+              Calidad. Madomi Pastas, Simplemente la Mejor.
             </p>
           </Col>
         </Row>
@@ -35,10 +38,7 @@ const Index = () => {
             </h4>
           </Col>
         </Row>
-        <Row
-          xs={12}
-          className="justify-content-center mx-0 parte-3"
-        >
+        <Row xs={12} className="justify-content-center mx-0 parte-3">
           <Col xs={12} lg={6} className="h-100">
             <h2 className="font-t-3 text-center">Nuestra Visión</h2>
             {/* <hr className="wa"></hr> */}
@@ -47,9 +47,9 @@ const Index = () => {
                 Elaborar alimentos con la máxima calidad e inocuidad a precios
                 competitivos para nuestros consumidores actuales y potenciales.
                 Mantener un sistema de distribución eficiente, que asegure
-                disponibilidad de productos en cada punto de venta donde Don
-                Yeyo tiene presencia, logrando beneficios comerciales para todo
-                el canal.
+                disponibilidad de productos en cada punto de venta donde Madomi
+                Pastas tiene presencia, logrando beneficios comerciales para
+                todo el canal.
               </p>
             </div>
           </Col>
