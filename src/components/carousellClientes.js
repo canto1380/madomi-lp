@@ -32,58 +32,58 @@ const CarouselClientes = () => {
 
   const items = [
     <div className="item-carousel-clientes" data-value="1">
-      <Image src={Sanatorio9DeJulio} className="img-carousel-1"></Image>
+      <Image src={Sanatorio9DeJulio} className="img-carousel-2"></Image>
     </div>,
     <div className="item-carousel-clientes" data-value="2">
-      <Image src={Capo} className="img-carousel-1"></Image>
+      <Image src={Capo} className="img-carousel-2"></Image>
     </div>,
     <div className="item-carousel-clientes" data-value="3">
-      <Image src={CaramHnos} className="img-carousel-1"></Image>
+      <Image src={CaramHnos} className="img-carousel-2"></Image>
     </div>,
     <div className="item-carousel-clientes" data-value="4">
-      <Image src={Carrefour} className="img-carousel-1"></Image>
+      <Image src={Carrefour} className="img-carousel-2"></Image>
     </div>,
     <div className="item-carousel-clientes" data-value="5">
-      <Image src={CatalinasPark} className="img-carousel-1"></Image>
+      <Image src={CatalinasPark} className="img-carousel-2"></Image>
     </div>,
     <div className="item-carousel-clientes" data-value="6">
-      <Image src={ChangoMas} className="img-carousel-1"></Image>
+      <Image src={ChangoMas} className="img-carousel-2"></Image>
     </div>,
     <div className="item-carousel-clientes" data-value="7">
-      <Image src={ClinicaMayo} className="img-carousel-1"></Image>
+      <Image src={ClinicaMayo} className="img-carousel-2"></Image>
     </div>,
     <div className="item-carousel-clientes" data-value="1">
-      <Image src={DistMiguelRamos} className="img-carousel-1"></Image>
+      <Image src={DistMiguelRamos} className="img-carousel-2"></Image>
     </div>,
     <div className="item-carousel-clientes" data-value="2">
-      <Image src={DistUruguay} className="img-carousel-1"></Image>
+      <Image src={DistUruguay} className="img-carousel-2"></Image>
     </div>,
     <div className="item-carousel-clientes" data-value="3">
-      <Image src={ElMarques} className="img-carousel-1"></Image>
+      <Image src={ElMarques} className="img-carousel-2"></Image>
     </div>,
     <div className="item-carousel-clientes" data-value="4">
-      <Image src={GomezPardo} className="img-carousel-1"></Image>
+      <Image src={GomezPardo} className="img-carousel-2"></Image>
     </div>,
     <div className="item-carousel-clientes" data-value="5">
-      <Image src={Hilton} className="img-carousel-1"></Image>
+      <Image src={Hilton} className="img-carousel-2"></Image>
     </div>,
     <div className="item-carousel-clientes" data-value="6">
-      <Image src={Libertad} className="img-carousel-1"></Image>
+      <Image src={Libertad} className="img-carousel-2"></Image>
     </div>,
     <div className="item-carousel-clientes" data-value="7">
-      <Image src={Lince} className="img-carousel-1"></Image>
+      <Image src={Lince} className="img-carousel-2"></Image>
     </div>,
     <div className="item-carousel-clientes" data-value="1">
-      <Image src={NyG} className="img-carousel-1"></Image>
+      <Image src={NyG} className="img-carousel-2"></Image>
     </div>,
     <div className="item-carousel-clientes" data-value="2">
-      <Image src={SanRamon} className="img-carousel-1"></Image>
+      <Image src={SanRamon} className="img-carousel-2"></Image>
     </div>,
     <div className="item-carousel-clientes" data-value="3">
-      <Image src={SupermercadoYa} className="img-carousel-1"></Image>
+      <Image src={SupermercadoYa} className="img-carousel-2"></Image>
     </div>,
     <div className="item-carousel-clientes" data-value="4">
-      <Image src={Tatito} className="img-carousel-1"></Image>
+      <Image src={Tatito} className="img-carousel-2"></Image>
     </div>,
   ];
   return (

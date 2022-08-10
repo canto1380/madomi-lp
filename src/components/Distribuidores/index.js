@@ -76,11 +76,11 @@ const Index = () => {
           <Col xs={10} lg={8} className="text-img">
             <div className="text-img-t">
               {" "}
-              Sumate a nuestra red de distribuidosres
+              Sumate a nuestra red de distribuidores
             </div>
             <span className="text-img-d">
-              Si estas interesado en sumarte a nuestro equipo de distribuidos,
-              por favor completa el siguiente fomrulario y nos pondremos en
+              Si estás interesado en sumarte a nuestro equipo de distribuidores,
+              por favor completa el siguiente formulario y nos pondremos en
               contacto a la brevedad. Muchas gracias!
             </span>
           </Col>
