@@ -53,7 +53,7 @@ const Index = () => {
           <h2 className="t-bienvenido pb-4">BIENVENIDO</h2>
           <span className="p-bienvenido text-secondary">
             Somos una Empresa dedicada a la fabricación de Pastas Frescas desde
-            1995.
+            1993.
           </span>
           <span className="p-bienvenido text-secondary">
             <br />
