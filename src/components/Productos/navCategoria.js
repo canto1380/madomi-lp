@@ -8,7 +8,7 @@ const NavCategoria = () => {
     const navbarText1 = document.getElementById("navbar-text1");
     const navbarText2 = document.getElementById("navbar-text2");
     const navbarText3 = document.getElementById("navbar-text3");
-    const navbarText4 = document.getElementById("navbar-text4");
+    // const navbarText4 = document.getElementById("navbar-text4");
 
     let ancho = window.screen.width;
     console.log(ancho)
@@ -27,18 +27,18 @@ const NavCategoria = () => {
           navbarText2.classList.remove("navbar-prod-text");
           navbarText3.classList.add("nav-prod-text-scroll");
           navbarText3.classList.remove("navbar-prod-text");
-          navbarText4.classList.add("nav-prod-text-scroll");
-          navbarText4.classList.remove("navbar-prod-text");
+          // navbarText4.classList.add("nav-prod-text-scroll");
+          // navbarText4.classList.remove("navbar-prod-text");
         } else {
           navbarText1.classList.add("navbar-prod-text");
           navbarText2.classList.add("navbar-prod-text");
           navbarText3.classList.add("navbar-prod-text");
-          navbarText4.classList.add("navbar-prod-text");
+          // navbarText4.classList.add("navbar-prod-text");
           navbarr.classList.remove("navbar-secundario");
           navbarText1.classList.remove("nav-prod-text-scroll");
           navbarText2.classList.remove("nav-prod-text-scroll");
           navbarText3.classList.remove("nav-prod-text-scroll");
-          navbarText4.classList.remove("nav-prod-text-scroll");
+          // navbarText4.classList.remove("nav-prod-text-scroll");
         }
       } else{
         if (positionX > 911) {
@@ -49,18 +49,18 @@ const NavCategoria = () => {
           navbarText2.classList.remove("navbar-prod-text");
           navbarText3.classList.add("nav-prod-text-scroll");
           navbarText3.classList.remove("navbar-prod-text");
-          navbarText4.classList.add("nav-prod-text-scroll");
-          navbarText4.classList.remove("navbar-prod-text");
+          // navbarText4.classList.add("nav-prod-text-scroll");
+          // navbarText4.classList.remove("navbar-prod-text");
         } else {
           navbarText1.classList.add("navbar-prod-text");
           navbarText2.classList.add("navbar-prod-text");
           navbarText3.classList.add("navbar-prod-text");
-          navbarText4.classList.add("navbar-prod-text");
+          // navbarText4.classList.add("navbar-prod-text");
           navbarr.classList.remove("navbar-secundario");
           navbarText1.classList.remove("nav-prod-text-scroll");
           navbarText2.classList.remove("nav-prod-text-scroll");
           navbarText3.classList.remove("nav-prod-text-scroll");
-          navbarText4.classList.remove("nav-prod-text-scroll");
+          // navbarText4.classList.remove("nav-prod-text-scroll");
         }
       }
     };
@@ -99,13 +99,13 @@ const NavCategoria = () => {
             </span>
           </Nav.Link>
         </Nav.Item>
-        <Nav.Item>
+        {/* <Nav.Item>
           <Nav.Link href="#divBombitas" eventKey="link-2">
             <span id="navbar-text4" className="navbar-prod-text">
               Tacos
             </span>
           </Nav.Link>
-        </Nav.Item>
+        </Nav.Item> */}
       </Nav>
     </>
   );

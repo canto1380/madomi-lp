@@ -13,7 +13,7 @@ const Index = () => {
             <p className="font-st text-center">De Tradicion</p>
             <p className="font-d text-center py-3 my-0">
               Somos una Empresa dedicada a la fabricación de Pastas Frescas
-              desde 1995. Nacimos en la ciudad de San Miguel de Tucumán,
+              desde 1993. Nacimos en la ciudad de San Miguel de Tucumán,
               Tucumán, Argentina con la misión de acercar a tu mesa Frescura y
               Calidad. Madomi Pastas, Simplemente la Mejor.
             </p>

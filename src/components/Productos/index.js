@@ -5,7 +5,7 @@ import NavCategoria from "./navCategoria";
 import ItemProductos from "./itemProductos";
 import PastasFrescas from "./PastasFrescas";
 import Tapas from "./Tapas";
-import Otros from './Otros'
+// import Otros from './Otros'
 import "./productos.css";
 
 import ProductosInicial from "../../img/productos/principal-v3.png";
@@ -41,14 +41,14 @@ const Productos = () => {
           </div>
           <PastasFrescas />
         </div>
-        <hr className='my-4'/>
+        {/* <hr className='my-4'/>
         <div id='divBombitas' className='py-4'>
           <div className='text-center mb-5'>
             <h3 className='text-titulo'>Nuevos</h3>
             <span className='text-descripcion'>Probalos, te van a encantar</span>
           </div>
           <Otros />
-        </div>
+        </div> */}
       </div>
     </Container>
   );
