@@ -40,7 +40,7 @@ const Index = () => {
       <Row className="justify-content-center">
         <Col xs={12} className="text-center">
           <div>
-            <p className="footer-text mb-0">developed by El Negro Ata</p>
+            <p className="footer-text mb-0">developed by Alejandro Peñalba</p>
           </div>
         </Col>
       </Row>

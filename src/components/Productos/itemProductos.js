@@ -22,7 +22,7 @@ const ItemProductos = () => {
       </Col>
       <Col xs={12} sm={6} lg={3} className='my-3 mx-3'>
         <Card className='border-0 card-product'>
-          <Card.Img variant="top" src={Tallarines1} className='img-product img-width'/>
+          <Card.Img variant="top" src={Tallarines1} className='img-product'/>
           <Card.Body>
             <Card.Title className='text-center text-products'>Tallarines x 500g</Card.Title>
             <Card.Text className='text-center fw-bold text-description'>

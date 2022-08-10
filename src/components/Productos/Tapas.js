@@ -27,7 +27,7 @@ const Tapas = () => {
           <Card.Img
             variant="top"
             src={Ravioles}
-            className="img-product img-width"
+            className="img-product"
           />
           <Card.Body>
             <Card.Title className="text-center text-products">
