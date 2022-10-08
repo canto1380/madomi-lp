@@ -40,6 +40,7 @@ const Index = () => {
   const validarNombreApellido = () => {
     setValidaNombre("");
     setNoValidaNombre("");
+    console.log(validaNombre, noValidaNombre, validaEmail, noValidaEmail, validaConsulta, noValidaConsulta)
     const ayn = nombreApellidoER;
     if (contacto.apeYNom.trim() !== "" && ayn.test(contacto.apeYNom)) {
       setValidaNombre(true);
