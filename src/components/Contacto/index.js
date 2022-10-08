@@ -1,12 +1,17 @@
 import React, { useState } from "react";
-import { useNavigate } from 'react-router-dom'
-import { Container, Image } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
+import { Container, Image, Form } from "react-bootstrap";
 
-import emailjs from 'emailjs-com'
+import emailjs from "emailjs-com";
+import MsjError from "../../helpers/MsjError";
 
 import { scrollToTop } from "../../helpers/helpers";
-import { messageSendEmail, ErrorSendMail } from '../../helpers/messages'
-// import { onlyEmail } from "../../helpers/regularExpression";
+import { messageSendEmail, ErrorSendMail } from "../../helpers/messages";
+import {
+  onlyEmail,
+  nombreApellidoER,
+  consultaER,
+} from "../../helpers/regularExpression";
 
 import Logo from "../../img/madomi-grande-sf.png";
 import Wsp from "../../img/whatsapp.png";
@@ -17,73 +22,149 @@ import "../index.css";
 const Index = () => {
   const navigate = useNavigate();
 
-
-
   const [contacto, setContacto] = useState({
     apeYNom: "",
     email: "",
-    consulta: ""
-  })
+    consulta: "",
+  });
 
+  const [validaNombre, setValidaNombre] = useState("");
+  const [noValidaNombre, setNoValidaNombre] = useState("");
+  const [validaEmail, setValidaEmail] = useState("");
+  const [noValidaEmail, setNoValidaEmail] = useState("");
+  const [validaConsulta, setValidaConsulta] = useState("");
+  const [noValidaConsulta, setNoValidaConsulta] = useState("");
 
-  const handleValores = (e)=>{
-    setContacto({...contacto, [e.target.name]: e.target.value})
-  }
-  
-  const handleContacto = (e) => {
-    e.preventDefault()
+  const [errorValid, setErrorValid] = useState(false);
 
-
-    const mensajeContacto = {
-      nombre: contacto.apeYNom,
-      email: contacto.email,
-      consulta: contacto.consulta
+  const validarNombreApellido = () => {
+    setValidaNombre("");
+    setNoValidaNombre("");
+    const ayn = nombreApellidoER;
+    if (contacto.apeYNom.trim() !== "" && ayn.test(contacto.apeYNom)) {
+      setValidaNombre(true);
+      return true;
+    } else {
+      setNoValidaNombre(true);
+      return false;
     }
-    
-    emailjs.send('service_1ng5el9','template_jqumwme',mensajeContacto, '6Eo-HKD7OTixioYCw')
-      .then(
-        (result) => {
-          if (result.status === 200) {
-            e.target.reset()
-            messageSendEmail()
-            navigate("/");
-            scrollToTop()
-          }
-        },
-          (error) => {
-            ErrorSendMail()
-          }
-        
-      )
-  }
+  };
+  const validarEmail = () => {
+    setValidaEmail("");
+    setNoValidaEmail("");
+    const emailValidar = onlyEmail;
+    if (contacto.email.trim() !== "" && emailValidar.test(contacto.email)) {
+      setValidaEmail(true);
+      return true;
+    } else {
+      setNoValidaEmail(true);
+      return false;
+    }
+  };
+  const validarConsulta = () => {
+    setValidaConsulta("");
+    setNoValidaConsulta("");
+    const consultaValida = consultaER;
+    if (
+      (contacto.consulta.trim() !== "") &
+      consultaValida.test(contacto.consulta)
+    ) {
+      setValidaConsulta(true);
+      return true;
+    } else {
+      setNoValidaConsulta(true);
+      return false;
+    }
+  };
+
+  const handleValores = (e) => {
+    setContacto({ ...contacto, [e.target.name]: e.target.value });
+  };
+
+  const handleContacto = (e) => {
+    try {
+      e.preventDefault();
+      if (validarNombreApellido() && validarEmail() && validarConsulta()) {
+        const mensajeContacto = {
+          nombre: contacto.apeYNom,
+          email: contacto.email,
+          consulta: contacto.consulta,
+        };
+
+        emailjs
+          .send(
+            "service_1ng5el9",
+            "template_jqumwme",
+            mensajeContacto,
+            "6Eo-HKD7OTixioYCw"
+          )
+          .then(
+            (result) => {
+              if (result.status === 200) {
+                e.target.reset();
+                messageSendEmail();
+                navigate("/");
+                scrollToTop();
+              }
+            },
+            (error) => {
+              ErrorSendMail();
+            }
+          );
+      } else {
+        setErrorValid(true);
+        setTimeout(() => {
+          setErrorValid(false);
+        }, 2000);
+      }
+    } catch (error) {
+      return error;
+    }
+  };
 
   return (
     <Container className="py-5">
       <article className="row justify-content-around">
         <div className="col-sm-12 col-md-6 my-3">
           <h3>Envianos un mensaje</h3>
-          <form action="" href='/' onSubmit={handleContacto}>
+          <form action="" href="/" onSubmit={handleContacto}>
             <div className="form-group py-2">
               <label htmlFor="">Nombre y Apellido*</label>
               <input
                 type="text"
-                name='apeYNom'
+                name="apeYNom"
+                minLength="6"
+                maxLength="60"
                 onChange={handleValores}
+                onBlur={validarNombreApellido}
+                // isValid={validaNombre}
+                // isInvalid={noValidaNombre}
                 placeholder="Juan Perez"
                 required
                 className="form-control"
               ></input>
+              <Form.Control.Feedback type="invalid" className="text-danger small">
+              Campo Obligatorio, al menos debe contener entre 6 - 60 caracteres.
+            </Form.Control.Feedback>
             </div>
             <div className="form-group py-2">
               <label htmlFor="">Email*</label>
               <input
                 type="email"
-                name='email'
+                name="email"
+                minLength="11"
+                maxLength="50"
+                onBlur={validarEmail}
+                // isValid={validaEmail}
+                // isInvalid={noValidaEmail}
                 onChange={handleValores}
                 placeholder="juanperez@gmail.com"
                 required
                 className="form-control"
               ></input>
+              <Form.Control.Feedback type="invalid" className="text-danger small">
+              Campo Obligatorio, al menos debe contener entre 11 - 50 caracteres.
+            </Form.Control.Feedback>
             </div>
             <div className="form-group py-2">
               <label htmlFor="">Consulta*</label>
@@ -93,13 +174,25 @@ const Index = () => {
                 id=""
                 cols="30"
                 rows="4"
+                minLength="10"
+                maxLength="300"
+                onBlur={validarConsulta}
+                // isValid={validaConsulta}
+                // isInvalid={noValidaConsulta}
                 className="form-control"
                 placeholder="ingrese su consulta"
                 required
               ></textarea>
+              <Form.Control.Feedback type="invalid" className="text-danger small">
+              Campo Obligatorio, al menos debe contener entre 10 - 300 caracteres.
+            </Form.Control.Feedback>
             </div>
             <div className="form-group form-check">
-              <input type="checkbox" className="form-check-input" defaultChecked />
+              <input
+                type="checkbox"
+                className="form-check-input"
+                defaultChecked
+              />
               <label className="form-check-label">
                 Suscribite a nuestras novedades
               </label>
@@ -109,6 +202,12 @@ const Index = () => {
                 Enviar
               </button>
             </div>
+            {errorValid ? (
+              <MsjError
+                text1="Datos incorrectos"
+                text2="Todos los campos son obligatorios"
+              />
+            ) : null}
           </form>
           <div>
             <a

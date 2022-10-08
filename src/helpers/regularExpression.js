@@ -14,6 +14,12 @@ const onlyAllowXNumbersInID = /^\d{1,9}$/;
 const onlyZNumbers = /^\d{0,3}$/;
 const onlyOneChar = /^.{0,1}$/;
 const onlyEmail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
+const nombreApellidoER = /^[a-zA-ZÀ-ÿ\s]{4,60}$/;
+const consultaER = /^[a-zA-ZÀ-ÿ\s]{4,60}$/;
+const nombreER = /^[a-zA-ZÀ-ÿ\s]{3,40}$/;
+const apellidoER = /^[a-zA-ZÀ-ÿ\s]{3,30}$/;
+const telefonoER = /^[0-9]{10,12}$/;
+
 
 export {
   noAllowExeptNumbers,
@@ -31,4 +37,9 @@ export {
   onlyZNumbers,
   onlyOneChar,
   onlyEmail,
+  nombreApellidoER,
+  consultaER,
+  nombreER,
+  apellidoER,
+  telefonoER
 };
