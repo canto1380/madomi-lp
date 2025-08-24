@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    /* font-family: 'JetBrains Mono', monospace; */
+  }
+
+  .font-serif {
+    font-family: 'Merriweather', 'Playfair Display', serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary-600 hover:bg-primary-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary-100 hover:bg-secondary-200 text-secondary-800 font-medium py-3 px-6 rounded-lg transition-colors duration-200;
+  }
+  .btn-whatsapp {
+    @apply rounded-lg bg-inherit text-black border border-green-400 px-2 py-1 md:px-4 py-2 flex items-center gap-2 transition duration-700 ease-in-out 
+    hover:scale-110 hover:bg-green-400 hover:text-white;
+  }
+  .icon-whatsapp {
+    @apply text-green-500 transition duration-700 ease-in-out 
+    hover:scale-110 hover:bg-green-400 hover:text-white;
+  }
+  
+  .section-padding {
+    @apply py-16 px-4 sm:px-6 lg:px-8;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .title-decoration {
+    @apply relative inline-block;
+  }
+
+  .title-decoration::before {
+    content: '';
+    @apply absolute -top-4 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-gradient-to-r from-transparent via-gray-400 to-transparent;
+  }
+
+  .title-decoration::after {
+    content: '';
+    @apply absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-orange-500 via-red-500 to-orange-500 rounded-full shadow-lg;
+  }
+
+  .card-product {
+    @apply bg-white rounded-2xl h-full flex items-center justify-center relative overflow-hidden transition-all duration-300 ease-in-out;
+  }
+
+  .card-product::before {
+    @apply absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-black/20 via-black/10 to-transparent pointer-events-none;
+  }
+
+  .card-product img {
+    @apply transition-all duration-300 ease-in-out transform scale-100 rounded-xl w-full h-full object-cover shadow-inner;
+  }
+
+  .card-product:hover {
+    filter: drop-shadow(0 10px 20px rgba(50, 49, 49, 0.66));
+  }
+
+  .card-product:hover img {
+    @apply scale-105 grayscale-0;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  .logo-float {
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .logo-float:hover {
+    transform: translateY(-5px);
+    filter: drop-shadow(0 10px 20px rgba(50, 49, 49, 0.66));
+  }
+
+  /* -- ANIMACION DE BRILLO -- */
+  .logo-glow {
+    transition: all 0.3s ease-in-out;
+  }
+  .logo-glow:hover {
+    filter: brightness(1.2) drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+  }
+
+  /* -- ANIMACION DE PULSO SUAVE -- */
+  .logo-pulse {
+    transition: all 0.3s ease-in-out;
+  }
+  .logo-pulse:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.15));
+  }
+
+  .grayscale-70 {
+    filter: grayscale(70%);
+  }
+  .grayscale-10 {
+    filter: grayscale(40%);
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px) scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+}
+
+
