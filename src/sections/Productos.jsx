@@ -11,37 +11,76 @@ const Testimonios = () => {
     {
       nombre: "producto 1",
       imagen: ImagenPrueba,
+      categoria: "Pastas Frescas"
     },
     {
       nombre: "producto 1",
       imagen: ImagenPrueba,
+      categoria: "Pastas Frescas"
     },
     {
       nombre: "producto 1",
       imagen: ImagenPrueba,
+      categoria: "Pastas Frescas"
     },
     {
       nombre: "producto 1",
       imagen: ImagenPrueba,
+      categoria: "Pastas Frescas"
     },
     {
       nombre: "producto 1",
       imagen: ImagenPrueba,
+      categoria: "Pastas Frescas"
     },
     {
       nombre: "producto 1",
       imagen: ImagenPrueba,
+      categoria: "Pastas Frescas"
     },
     {
       nombre: "producto 1",
       imagen: ImagenPrueba,
+      categoria: "Tapas"
     },
     {
       nombre: "producto 1",
       imagen: ImagenPrueba,
+      categoria: "Tapas"
     },
-
+    {
+      nombre: "producto 1",
+      imagen: ImagenPrueba,
+      categoria: "Tapas"
+    },
+    {
+      nombre: "producto 1",
+      imagen: ImagenPrueba,
+      categoria: "Tapas"
+    },
+    {
+      nombre: "producto 1",
+      imagen: ImagenPrueba,
+      categoria: "Tapas"
+    },
+    {
+      nombre: "producto 1",
+      imagen: ImagenPrueba,
+      categoria: "Tapas"
+    },
   ];
+
+  // Lógica para agrupar productos por categoría
+  const productosPorCategoria = testimonios.reduce((acc, producto) => {
+    if (!acc[producto.categoria]) {
+      acc[producto.categoria] = [];
+    }
+    acc[producto.categoria].push(producto);
+    return acc;
+  }, {});
+
+  // Obtener las categorías únicas
+  const categorias = Object.keys(productosPorCategoria);
 
   const renderStars = (rating) => {
     return Array.from({ length: 5 }, (_, index) => (
@@ -84,63 +123,84 @@ const Testimonios = () => {
  
         </div>
 
-        {/* Testimonials Slider */}
-        <div className="relative max-w-6xl mx-auto">
-          {/* Botones de navegación externos */}
-          <div className="absolute -left-16 top-1/2 transform -translate-y-1/2 z-10">
-            <button className="swiper-button-prev-custom bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300">
-              <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-            </button>
-          </div>
-          
-          <div className="absolute -right-16 top-1/2 transform -translate-y-1/2 z-10">
-            <button className="swiper-button-next-custom bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300">
-              <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
-          </div>
+        {/* Renderizar cada categoría con su subtítulo y slider */}
+        {categorias.map((categoria, categoriaIndex) => (
+          <div key={categoria} className={categoriaIndex > 0 ? "mt-20" : ""}>
+            {/* Subtítulo de categoría */}
+            <div className="text-center mb-12">
+              <div className="relative inline-block">
+                {/* Subtítulo de categoría */}
+                <h3 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-2 relative z-10">
+                  {categoria}
+                  {/* Elementos decorativos laterales centrados con el texto */}
+                  <div className={`absolute -left-8 top-1/2 transform -translate-y-1/2 w-6 h-0.5 ${categoria === 'Pastas Frescas' ? 'bg-gradient-to-r from-transparent to-green-600' : 'bg-gradient-to-r from-transparent to-red-400'}`}></div>
+                  <div className={`absolute -right-8 top-1/2 transform -translate-y-1/2 w-6 h-0.5 ${categoria === 'Pastas Frescas' ? 'bg-gradient-to-l from-transparent to-green-600' : 'bg-gradient-to-l from-transparent to-red-400'}`}></div>
+                </h3>
+                
+                {/* Línea decorativa inferior */}
+                <div className={`absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-32 h-0.5 ${categoria === 'Pastas Frescas' ? ' bg-gradient-to-r from-green-600 via-transparent to-green-600 rounded-full' : 'bg-gradient-to-r from-red-600 via-transparent to-red-400 rounded-full'}`}></div>
+              </div>
+            </div>
 
-          <Swiper
-            modules={[Autoplay, Pagination, Navigation]}
-            spaceBetween={30}
-            slidesPerView={1}
-            breakpoints={{
-              640: {
-                slidesPerView: 2,
-                spaceBetween: 30,
-              },
-              1024: {
-                slidesPerView: 3,
-                spaceBetween: 30,
-              },
-            }}
-            autoplay={{
-              delay: 5000,
-              disableOnInteraction: false,
-            }}
-            navigation={{
-              nextEl: '.swiper-button-next-custom',
-              prevEl: '.swiper-button-prev-custom',
-            }}
-            loop={true}
-            className="testimonials-swiper"
-          >
-            {testimonios.map((testimonio, index) => (
-              <SwiperSlide key={index}>
-                <div className="card-product">
-                  <img
-                    src={testimonio.imagen}
-                    alt={testimonio.nombre}
-                    className="w-full h-full object-cover grayscale-10"
-                  />
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
+            {/* Testimonials Slider */}
+            <div className="relative max-w-6xl mx-auto">
+              {/* Botones de navegación externos */}
+              <div className="absolute -left-16 top-1/2 transform -translate-y-1/2 z-10">
+                <button className={`swiper-button-prev-custom-${categoriaIndex} bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300`}>
+                  <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                  </svg>
+                </button>
+              </div>
+              
+              <div className="absolute -right-16 top-1/2 transform -translate-y-1/2 z-10">
+                <button className={`swiper-button-next-custom-${categoriaIndex} bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300`}>
+                  <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
+              </div>
+
+              <Swiper
+                modules={[Autoplay, Pagination, Navigation]}
+                spaceBetween={30}
+                slidesPerView={1}
+                breakpoints={{
+                  640: {
+                    slidesPerView: 2,
+                    spaceBetween: 30,
+                  },
+                  1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                  },
+                }}
+                autoplay={{
+                  delay: 5000,
+                  disableOnInteraction: false,
+                }}
+                navigation={{
+                  nextEl: `.swiper-button-next-custom-${categoriaIndex}`,
+                  prevEl: `.swiper-button-prev-custom-${categoriaIndex}`,
+                }}
+                loop={true}
+                className="testimonials-swiper"
+              >
+                {productosPorCategoria[categoria].map((testimonio, index) => (
+                  <SwiperSlide key={`${categoria}-${index}`}>
+                    <div className="card-product">
+                      <img
+                        src={testimonio.imagen}
+                        alt={testimonio.nombre}
+                        className="w-full h-full object-cover grayscale-10"
+                      />
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
+          </div>
+        ))}
 
         <style jsx>{`
           .testimonials-swiper .swiper-pagination-bullet {
@@ -154,8 +214,10 @@ const Testimonios = () => {
           .testimonials-swiper .swiper-button-prev {
             display: none !important;
           }
-          .swiper-button-next-custom:hover,
-          .swiper-button-prev-custom:hover {
+          .swiper-button-next-custom-0:hover,
+          .swiper-button-prev-custom-0:hover,
+          .swiper-button-next-custom-1:hover,
+          .swiper-button-prev-custom-1:hover {
             background-color: #f3f4f6 !important;
             transform: scale(1.05);
           }
