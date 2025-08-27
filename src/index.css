@@ -75,14 +75,16 @@
 
   .card-product img {
     @apply transition-all duration-300 ease-in-out transform scale-100 rounded-xl w-full h-full object-cover shadow-inner;
+    filter: drop-shadow(5px -5px 7px rgba(50, 49, 49, 0.4));
   }
 
   .card-product:hover {
-    filter: drop-shadow(0 10px 20px rgba(50, 49, 49, 0.66));
+    filter: drop-shadow(0 10px 10px rgba(50, 49, 49, 0.4));
   }
 
   .card-product:hover img {
     @apply scale-105 grayscale-0;
+    filter: drop-shadow(5px -5px 7px rgba(50, 49, 49, 0.4));
   }
 }
 
@@ -134,6 +136,14 @@
       transform: translateY(0) scale(1);
     }
   }
+}
+
+/* Clase para gradiente de texto en hover */
+.hover-text-gradient:hover {
+  background: linear-gradient(135deg, #171717, #b8b8b8, #171717);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 

@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation, EffectFade } from 'swiper/modules';
 import ImgNoqui from '../assets/images/plato-noquis.jpg';
 import ImgTallarines from '../assets/images/tallarines.jpg';
-import LogoMadomi from '../assets/images/logo-madomi.png';
+import LogoMadomi from '../assets/images/madomi3.png';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -60,12 +60,12 @@ const Hero = () => {
     <section id="inicio" ref={heroRef} className="relative min-h-screen flex items-center">
       {/* Logo superpuesto */}
 
-      <div className="absolute inset-0 flex items-center justify-center z-20 ">
-        <div className={`transform transition-transform duration-500 ease-in-out ${isVisible ? 'animate-fade-in' : ''} logo-float`}>
+      <div className="absolute inset-0 flex items-center justify-center z-20">
+        <div className={`transform transition-transform duration-500 ease-in-out ${isVisible ? 'animate-fade-in' : ''} logo-float logo-move-continuous`}>
           <img
             src={LogoMadomi}
             alt="Madomi Logo"
-            className="h-16 md:h-24 lg:h-60 w-auto object-contain drop-shadow-2xl pointer-events-none"
+            className="h-36 md:h-24 lg:h-60 w-auto object-contain drop-shadow-2xl pointer-events-none"
           />
         </div>
       </div>

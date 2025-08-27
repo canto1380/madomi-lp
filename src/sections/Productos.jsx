@@ -1,77 +1,138 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-import ImagenPrueba from '../assets/images/tallarines.jpg';
+/** IMAGENES **/
+import Tallarines1 from '../assets/images/productos/tallarines1.png'; // Fideos
+import Tallarines2 from '../assets/images/productos/tallarines2.png'; // Fideos
+import Tallarines3 from '../assets/images/productos/tallarines3.png'; // Fideos
+import TapaEmpanadas from '../assets/images/productos/tapaEmpanadas1.png'; // Tapas y discos
+import Capellettis1 from '../assets/images/productos/capellettis1.png'; // Pastas frescas
+import Capellettis2 from '../assets/images/productos/capellettis2.png'; // Pastas frescas
+import Noquis from '../assets/images/productos/noquis.png'; // Pastas frescas
+import Noquis1 from '../assets/images/productos/noquis1.png'; // Pastas frescas
+import PascualinaLight from '../assets/images/productos/PascualinasLight.png'; // Tapas y discos
+import Tartas1 from '../assets/images/productos/tapaTartas1.png'; // Tapas y discos
+import Tartas2 from '../assets/images/productos/tapaTartas2.png'; // Tapas y discos
+import Ravioles1 from '../assets/images/productos/ravioles1.png'; // Pastas frescas
+import Ravioles2 from '../assets/images/productos/ravioles2.png'; // Pastas frescas
+import Ravioles3 from '../assets/images/productos/ravioles3.png'; // Pastas frescas
+import Ravioles4 from '../assets/images/productos/ravioles4.png'; // Pastas frescas
+import Ravioles5 from '../assets/images/productos/ravioles5.png'; // Pastas frescas
+import Ravioles6 from '../assets/images/productos/ravioles6.png'; // Pastas frescas
+import Sorrentinos1 from '../assets/images/productos/sorrentinos1.png'; // Pastas frescas
+import Sorrentinos2 from '../assets/images/productos/sorrentinos2.png'; // Pastas frescas
+
+
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 const Testimonios = () => {
-  const testimonios = [
+  const productos = [
     {
-      nombre: "producto 1",
-      imagen: ImagenPrueba,
-      categoria: "Pastas Frescas"
+      nombre: "Capellettis de pollo y espinaca",
+      imagen: Capellettis1,
+      categoria: "Pastas frescas"
     },
     {
-      nombre: "producto 1",
-      imagen: ImagenPrueba,
-      categoria: "Pastas Frescas"
+      nombre: "Capellettis de 4 quesos",
+      imagen: Capellettis2,
+      categoria: "Pastas frescas"
     },
     {
-      nombre: "producto 1",
-      imagen: ImagenPrueba,
-      categoria: "Pastas Frescas"
+      nombre: "Noquis de papa",
+      imagen: Noquis,
+      categoria: "Pastas frescas"
     },
     {
-      nombre: "producto 1",
-      imagen: ImagenPrueba,
-      categoria: "Pastas Frescas"
+      nombre: "Noquis con papa",
+      imagen: Noquis1,
+      categoria: "Pastas frescas"
     },
     {
-      nombre: "producto 1",
-      imagen: ImagenPrueba,
-      categoria: "Pastas Frescas"
+      nombre: "Ravioles de ricota y espinaca",
+      imagen: Ravioles1,
+      categoria: "Pastas frescas"
     },
     {
-      nombre: "producto 1",
-      imagen: ImagenPrueba,
-      categoria: "Pastas Frescas"
+      nombre: "Ravioles de pollo y espinaca",
+      imagen: Ravioles2,
+      categoria: "Pastas frescas"
+    },
+    
+    {
+      nombre: "Ravioles de 4 quesos",
+      imagen: Ravioles3,
+      categoria: "Pastas frescas"
+    },
+    
+    {
+      nombre: "Ravioles de pollo y verduras",
+      imagen: Ravioles4,
+      categoria: "Pastas frescas"
+    },
+    
+    {
+      nombre: "Ravioles de pollo y verduras 1",
+      imagen: Ravioles5,
+      categoria: "Pastas frescas"
+    },    
+    {
+      nombre: "Ravioles de pollo y verduras 2",
+      imagen: Ravioles6,
+      categoria: "Pastas frescas"
     },
     {
-      nombre: "producto 1",
-      imagen: ImagenPrueba,
-      categoria: "Tapas"
+      nombre: "Sorrentinos de ricota, jamín y muzzarella",
+      imagen: Sorrentinos1,
+      categoria: "Pastas frescas"
     },
     {
-      nombre: "producto 1",
-      imagen: ImagenPrueba,
-      categoria: "Tapas"
+      nombre: "Sorrentinos de pollo y verduras",
+      imagen: Sorrentinos2,
+      categoria: "Pastas frescas"
     },
     {
-      nombre: "producto 1",
-      imagen: ImagenPrueba,
-      categoria: "Tapas"
+      nombre: "tallarines de espinaca",
+      imagen: Tallarines1,
+      categoria: "Fideos"
     },
     {
-      nombre: "producto 1",
-      imagen: ImagenPrueba,
-      categoria: "Tapas"
+      nombre: "Tallarines de huevo",
+      imagen: Tallarines2,
+      categoria: "Fideos"
     },
     {
-      nombre: "producto 1",
-      imagen: ImagenPrueba,
-      categoria: "Tapas"
+      nombre: "Tallarines de morrones",
+      imagen: Tallarines3,
+      categoria: "Fideos"
     },
     {
-      nombre: "producto 1",
-      imagen: ImagenPrueba,
-      categoria: "Tapas"
+      nombre: "Tapa de empanadas",
+      imagen: TapaEmpanadas,
+      categoria: "Tapas y discos"
     },
+    {
+      nombre: "Pascualina light",
+      imagen: PascualinaLight,
+      categoria: "Tapas y discos"
+    },
+    {
+      nombre: "Tapa de tartas",
+      imagen: Tartas1,
+      categoria: "Tapas y discos"
+    },
+    {
+      nombre: "Tapa de tarta pascualina",
+      imagen: Tartas2,
+      categoria: "Tapas y discos"
+    },
+    
+    
   ];
 
   // Lógica para agrupar productos por categoría
-  const productosPorCategoria = testimonios.reduce((acc, producto) => {
+  const productosPorCategoria = productos.reduce((acc, producto) => {
     if (!acc[producto.categoria]) {
       acc[producto.categoria] = [];
     }
@@ -133,12 +194,12 @@ const Testimonios = () => {
                 <h3 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-2 relative z-10">
                   {categoria}
                   {/* Elementos decorativos laterales centrados con el texto */}
-                  <div className={`absolute -left-8 top-1/2 transform -translate-y-1/2 w-6 h-0.5 ${categoria === 'Pastas Frescas' ? 'bg-gradient-to-r from-transparent to-green-600' : 'bg-gradient-to-r from-transparent to-red-400'}`}></div>
-                  <div className={`absolute -right-8 top-1/2 transform -translate-y-1/2 w-6 h-0.5 ${categoria === 'Pastas Frescas' ? 'bg-gradient-to-l from-transparent to-green-600' : 'bg-gradient-to-l from-transparent to-red-400'}`}></div>
+                  <div className={`absolute -left-8 top-1/2 transform -translate-y-1/2 w-6 h-0.5 ${categoria === 'Pastas frescas' ? 'bg-gradient-to-r from-transparent to-green-600' : categoria === 'Fideos' ? 'bg-gradient-to-r from-transparent to-blue-600' : 'bg-gradient-to-r from-transparent to-red-400'}`}></div>
+                  <div className={`absolute -right-8 top-1/2 transform -translate-y-1/2 w-6 h-0.5 ${categoria === 'Pastas frescas' ? 'bg-gradient-to-l from-transparent to-green-600' : categoria === 'Fideos' ? 'bg-gradient-to-l from-transparent to-blue-600' : 'bg-gradient-to-l from-transparent to-red-400'}`}></div>
                 </h3>
                 
                 {/* Línea decorativa inferior */}
-                <div className={`absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-32 h-0.5 ${categoria === 'Pastas Frescas' ? ' bg-gradient-to-r from-green-600 via-transparent to-green-600 rounded-full' : 'bg-gradient-to-r from-red-600 via-transparent to-red-400 rounded-full'}`}></div>
+                <div className={`absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-32 h-0.5 ${categoria === 'Pastas frescas' ? ' bg-gradient-to-r from-green-600 via-transparent to-green-600 rounded-full' : categoria === 'Fideos' ? 'bg-gradient-to-r from-blue-600 via-transparent to-blue-600 rounded-full' : 'bg-gradient-to-r from-red-600 via-transparent to-red-400 rounded-full'}`}></div>
               </div>
             </div>
 

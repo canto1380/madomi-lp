@@ -20,6 +20,11 @@ const Historia = () => {
   const [isVisible, setIsVisible] = useState(false);
   const statsRef = useRef(null);
 
+  // Función para formatear números con separador de miles
+  const formatNumber = (num) => {
+    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+  };
+
   // Datos del slider de historia
   const historiaSlides = [
     {
@@ -28,8 +33,8 @@ const Historia = () => {
       description2: "Somos la 2º generación de una familia dedicada a la elaboración de productos derivados de la harina. Amamos la buena cocina y es por esto que elaboramos nuestros productos con los mejores ingredientes.",
       image: HistoriaImage1,
       stats: {
-        years: 20,
-        clients: 1000,
+        years: 30,
+        clients: 10000,
         yearsLabel: "Años de experiencia",
         clientsLabel: "Clientes y Distribuidores"
       }
@@ -40,8 +45,8 @@ const Historia = () => {
       description2: "A lo largo de los años, hemos evolucionado y crecido, pero nuestros valores fundamentales permanecen intactos. Cada proyecto, cada cliente y cada desafío nos ha ayudado a mejorar y a fortalecer nuestra posición en el mercado.",
       image: HistoriaImage2,
       stats: {
-        product: 35,
-        family: 1500,
+        product: 30,
+        family: 15000,
         productLabel: "Productos",
         familyLabel: "Familias confían en nosotros"
       }
@@ -198,7 +203,7 @@ const Historia = () => {
                     <div className="grid grid-cols-2 gap-6 mt-8" ref={index === currentSlide ? statsRef : null}>
                       <div className="text-center p-4 bg-gradient-to-br from-gray-100 to-gray-100 rounded-xl border border-gray-200 transform hover:scale-105 transition-transform duration-300">
                         <div className="text-3xl font-bold text-green-600 mb-2">
-                          {index === currentSlide ? statsCounts.first : (slide.stats.years || slide.stats.product || 0)}+
+                          {index === currentSlide ? formatNumber(statsCounts.first) : formatNumber(slide.stats.years || slide.stats.product || 0)}+
                         </div>
                         <div className="text-sm text-gray-600 font-medium">
                           {slide.stats.yearsLabel || slide.stats.productLabel}
@@ -206,7 +211,7 @@ const Historia = () => {
                       </div>
                       <div className="text-center p-4 bg-gradient-to-br from-gray-100 to-gray-100 rounded-xl border border-gray-200 transform hover:scale-105 transition-transform duration-300">
                         <div className="text-3xl font-bold text-green-600 mb-2">
-                          {index === currentSlide ? statsCounts.second : (slide.stats.clients || slide.stats.family || 0)}+
+                          {index === currentSlide ? formatNumber(statsCounts.second) : formatNumber(slide.stats.clients || slide.stats.family || 0)}+
                         </div>
                         <div className="text-sm text-gray-600 font-medium">
                           {slide.stats.clientsLabel || slide.stats.familyLabel}

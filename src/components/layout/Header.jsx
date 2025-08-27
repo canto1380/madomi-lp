@@ -23,33 +23,31 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
 
-            <a href="#historia" className="text-gray-700 hover:text-primary-600 transition-colors duration-200">
+            <a href="#historia" className="text-gray-700 hover-text-gradient transition-all duration-500">
               Historia
             </a>
-            <a href="#productos" className="text-gray-700 hover:text-primary-600 transition-colors duration-200">
+            <a href="#productos" className="text-gray-700 hover-text-gradient transition-all duration-500">
               Productos
             </a>
 
-            <a href="#contacto" className="text-gray-700 hover:text-primary-600 transition-colors duration-200">
+            <a href="#contacto" className="text-gray-700 hover-text-gradient transition-all duration-500">
               Contacto
             </a>
           </nav>
 
           {/* CTA Button */}
           <div className="flex items-center gap-2">
-            <button className="btn-whatsapp">
-              <span className="text-sm md:text-base">
-              Contactanos
-              </span>
-              <a
+            <a
               href="https://wa.me/3816686081"
               target="_blank"
               rel="noopener noreferrer"
+              className="btn-whatsapp"
             >
-              <FaWhatsapp className="w-5 h-5 md:w-6 md:h-6 icon-whatsapp" />
+              <span className="text-sm md:text-base">
+                Contactanos
+              </span>
+              <FaWhatsapp className="w-4 h-4 md:w-6 md:h-6 text-green-600 hover:text-white transition-all duration-700" />
             </a>
-            </button>
-            
           </div>
 
           {/* Mobile Menu Button */}
