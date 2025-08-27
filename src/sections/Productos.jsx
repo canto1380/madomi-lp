@@ -186,7 +186,7 @@ const Testimonios = () => {
 
         {/* Renderizar cada categoría con su subtítulo y slider */}
         {categorias.map((categoria, categoriaIndex) => (
-          <div key={categoria} className={categoriaIndex > 0 ? "mt-20" : ""}>
+          <div key={categoria} className={categoriaIndex > 0 ? "mt-14" : ""}>
             {/* Subtítulo de categoría */}
             <div className="text-center mb-12">
               <div className="relative inline-block">
@@ -205,18 +205,18 @@ const Testimonios = () => {
 
             {/* Testimonials Slider */}
             <div className="relative max-w-6xl mx-auto">
-              {/* Botones de navegación externos */}
-              <div className="absolute -left-16 top-1/2 transform -translate-y-1/2 z-10">
-                <button className={`swiper-button-prev-custom-${categoriaIndex} bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300`}>
-                  <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              {/* Botones de navegación externos - Ocultos en móviles */}
+              <div className="absolute -left-4 md:-left-16 top-1/2 transform -translate-y-1/2 z-10 hidden md:block">
+                <button className={`swiper-button-prev-custom-${categoriaIndex} bg-white rounded-full p-2 md:p-3 shadow-lg hover:shadow-xl transition-all duration-300`}>
+                  <svg className="w-4 h-4 md:w-6 md:h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                   </svg>
                 </button>
               </div>
               
-              <div className="absolute -right-16 top-1/2 transform -translate-y-1/2 z-10">
-                <button className={`swiper-button-next-custom-${categoriaIndex} bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300`}>
-                  <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="absolute -right-4 md:-right-16 top-1/2 transform -translate-y-1/2 z-10 hidden md:block">
+                <button className={`swiper-button-next-custom-${categoriaIndex} bg-white rounded-full p-2 md:p-3 shadow-lg hover:shadow-xl transition-all duration-300`}>
+                  <svg className="w-4 h-4 md:w-6 md:h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </button>
@@ -253,7 +253,7 @@ const Testimonios = () => {
                       <img
                         src={testimonio.imagen}
                         alt={testimonio.nombre}
-                        className="w-full h-full object-cover grayscale-10"
+                        className="w-full h-full object-cover object-center grayscale-10"
                       />
                     </div>
                   </SwiperSlide>

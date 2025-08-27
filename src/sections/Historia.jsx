@@ -141,18 +141,18 @@ const Historia = () => {
 
         {/* Slider de Historia */}
         <div className="relative max-w-6xl mx-auto">
-          {/* Botones de navegación externos */}
-          <div className="absolute -left-16 top-1/2 transform -translate-y-1/2 z-10">
-            <button className="swiper-button-prev-custom bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300">
-              <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          {/* Botones de navegación externos - Ocultos en móviles */}
+          <div className="absolute -left-4 md:-left-16 top-1/2 transform -translate-y-1/2 z-10 hidden md:block">
+            <button className="swiper-button-prev-custom bg-white rounded-full p-2 md:p-3 shadow-lg hover:shadow-xl transition-all duration-300">
+              <svg className="w-4 h-4 md:w-6 md:h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
             </button>
           </div>
           
-          <div className="absolute -right-16 top-1/2 transform -translate-y-1/2 z-10">
-            <button className="swiper-button-next-custom bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300">
-              <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="absolute -right-4 md:-right-16 top-1/2 transform -translate-y-1/2 z-10 hidden md:block">
+            <button className="swiper-button-next-custom bg-white rounded-full p-2 md:p-3 shadow-lg hover:shadow-xl transition-all duration-300">
+              <svg className="w-4 h-4 md:w-6 md:h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </button>
@@ -179,7 +179,7 @@ const Historia = () => {
               crossFade: true
             }}
             speed={2000}
-            allowTouchMove={false}
+            allowTouchMove={true}
             allowMouseDrag={false}
             className="historia-swiper"
             onSlideChange={(swiper) => setCurrentSlide(swiper.realIndex)}
@@ -187,15 +187,28 @@ const Historia = () => {
             {historiaSlides.map((slide, index) => (
               <SwiperSlide key={index}>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-                  {/* Columna izquierda - Texto */}
-                  <div className="space-y-6">
-                    <h3 className="text-3xl font-bold text-gray-900 mb-6 font-serif">
+                  {/* Columna derecha - Imagen (primera en móviles) */}
+                  <div className="relative order-1 lg:order-2">
+                    <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+                      <img
+                        src={slide.image}
+                        alt="Nuestra Historia"
+                        className="w-full h-96 object-cover"
+                      />
+                      {/* Overlay sutil */}
+                      <div className="absolute inset-0 bg-gradient-to-b from-white/20 to-white/30 to-transparent"></div>
+                    </div>
+                  </div>
+
+                  {/* Columna izquierda - Texto y estadísticas (segunda en móviles) */}
+                  <div className="space-y-6 order-2 lg:order-1">
+                    <h3 className="text-3xl text-center md:text-left font-bold text-gray-900 mb-6 font-serif">
                       {slide.title}
                     </h3>
-                    <p className="text-lg text-gray-600 leading-relaxed">
+                    <p className="text-lg text-center md:text-left text-gray-600 leading-relaxed">
                       {slide.description1}
                     </p>
-                    <p className="text-lg text-gray-600 leading-relaxed">
+                    <p className="text-lg text-center md:text-left text-gray-600 leading-relaxed">
                       {slide.description2}
                     </p>
 
@@ -217,19 +230,6 @@ const Historia = () => {
                           {slide.stats.clientsLabel || slide.stats.familyLabel}
                         </div>
                       </div>
-                    </div>
-                  </div>
-
-                  {/* Columna derecha - Imagen */}
-                  <div className="relative">
-                    <div className="relative overflow-hidden rounded-2xl shadow-2xl">
-                      <img
-                        src={slide.image}
-                        alt="Nuestra Historia"
-                        className="w-full h-96 object-cover"
-                      />
-                      {/* Overlay sutil */}
-                      <div className="absolute inset-0 bg-gradient-to-b from-white/20 to-white/30 to-transparent"></div>
                     </div>
                   </div>
                 </div>
