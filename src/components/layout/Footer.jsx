@@ -25,7 +25,7 @@ const Footer = () => {
               <h3 className="text-white font-semibold text-lg mb-2">Contacto</h3>
               <div className="space-y-2 text-gray-300 text-center md:text-left">
                 <p>San Miguel de Tucumán, Argentina</p>
-                <p> 0381 4274562</p>
+                <p> 0381 6686081</p>
                 <p>madomipastas@gmail.com</p>
               </div>
             </div>

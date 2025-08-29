@@ -1,26 +1,20 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 /** IMAGENES **/
-import Tallarines1 from '../assets/images/productos/tallarines1.png'; // Fideos
-import Tallarines2 from '../assets/images/productos/tallarines2.png'; // Fideos
-import Tallarines3 from '../assets/images/productos/tallarines3.png'; // Fideos
-import TapaEmpanadas from '../assets/images/productos/tapaEmpanadas1.png'; // Tapas y discos
-import Capellettis1 from '../assets/images/productos/capellettis1.png'; // Pastas frescas
-import Capellettis2 from '../assets/images/productos/capellettis2.png'; // Pastas frescas
-import Noquis from '../assets/images/productos/noquis.png'; // Pastas frescas
-import Noquis1 from '../assets/images/productos/noquis1.png'; // Pastas frescas
-import PascualinaLight from '../assets/images/productos/PascualinasLight.png'; // Tapas y discos
-import Tartas1 from '../assets/images/productos/tapaTartas1.png'; // Tapas y discos
-import Tartas2 from '../assets/images/productos/tapaTartas2.png'; // Tapas y discos
-import Ravioles1 from '../assets/images/productos/ravioles1.png'; // Pastas frescas
-import Ravioles2 from '../assets/images/productos/ravioles2.png'; // Pastas frescas
-import Ravioles3 from '../assets/images/productos/ravioles3.png'; // Pastas frescas
-import Ravioles4 from '../assets/images/productos/ravioles4.png'; // Pastas frescas
-import Ravioles5 from '../assets/images/productos/ravioles5.png'; // Pastas frescas
-import Ravioles6 from '../assets/images/productos/ravioles6.png'; // Pastas frescas
-import Sorrentinos1 from '../assets/images/productos/sorrentinos1.png'; // Pastas frescas
-import Sorrentinos2 from '../assets/images/productos/sorrentinos2.png'; // Pastas frescas
-
+import Capellettis1 from '../assets/images/productos/capellettis1.webp'; // Pastas frescas
+import Capellettis2 from '../assets/images/productos/capellettis2.webp'; // Pastas frescas
+import Noquis1 from '../assets/images/productos/noquis1.webp'; // Pastas frescas
+import PanRallado from '../assets/images/productos/panRalladoTradicional.webp'; // Tapas y discos
+import Ravioles2 from '../assets/images/productos/ravioles2.webp'; // Pastas frescas
+import Ravioles3 from '../assets/images/productos/ravioles3.webp'; // Pastas frescas
+import Ravioles4 from '../assets/images/productos/ravioles4.webp'; // Pastas frescas
+import Ravioles5 from '../assets/images/productos/ravioles5.webp'; // Pastas frescas
+import Sorrentinos1 from '../assets/images/productos/sorrentinos1.webp'; // Pastas frescas
+import Sorrentinos2 from '../assets/images/productos/sorrentinos2.webp'; // Pastas frescas
+import Tallarines from '../assets/images/productos/tallarines.webp'; // Fideos
+import TapaEmpanadas from '../assets/images/productos/tapaEmpanadas1.webp'; // Tapas y discos
+import TapaPascualinaCriolla from '../assets/images/productos/tapaPascualinaCriolla.webp'
+import TapaPascualinaHojaldre from '../assets/images/productos/tapaPascualinaHojaldre.png'
 
 // Import Swiper styles
 import 'swiper/css';
@@ -32,111 +26,99 @@ const Testimonios = () => {
     {
       nombre: "Capellettis de pollo y espinaca",
       imagen: Capellettis1,
-      categoria: "Pastas frescas"
+      categoria: "Pastas frescas",
+      categoriaGeneral: 'productos generales'
     },
     {
       nombre: "Capellettis de 4 quesos",
       imagen: Capellettis2,
-      categoria: "Pastas frescas"
+      categoria: "Pastas frescas",
+      categoriaGeneral: 'productos generales'
     },
     {
-      nombre: "Noquis de papa",
-      imagen: Noquis,
-      categoria: "Pastas frescas"
+      nombre: "Tapa pascualina criolla",
+      imagen: TapaPascualinaCriolla,
+      categoria: "Pastas frescas",
+      categoriaGeneral: 'productos generales'
     },
     {
       nombre: "Noquis con papa",
       imagen: Noquis1,
-      categoria: "Pastas frescas"
+      categoria: "Pastas frescas",
+      categoriaGeneral: 'productos generales'
     },
     {
-      nombre: "Ravioles de ricota y espinaca",
-      imagen: Ravioles1,
-      categoria: "Pastas frescas"
+      nombre: "Tapa pascualina hojaldre",
+      imagen: TapaPascualinaHojaldre,
+      categoria: "Pastas frescas",
+      categoriaGeneral: 'productos generales'
     },
     {
       nombre: "Ravioles de pollo y espinaca",
       imagen: Ravioles2,
-      categoria: "Pastas frescas"
+      categoria: "Pastas frescas",
+      categoriaGeneral: 'productos generales'
     },
     
     {
       nombre: "Ravioles de 4 quesos",
       imagen: Ravioles3,
-      categoria: "Pastas frescas"
+      categoria: "Pastas frescas",
+      categoriaGeneral: 'productos generales'
     },
     
     {
       nombre: "Ravioles de pollo y verduras",
       imagen: Ravioles4,
-      categoria: "Pastas frescas"
+      categoria: "Pastas frescas",
+      categoriaGeneral: 'productos generales'
     },
     
     {
       nombre: "Ravioles de pollo y verduras 1",
       imagen: Ravioles5,
-      categoria: "Pastas frescas"
+      categoria: "Pastas frescas",
+      categoriaGeneral: 'productos generales'
     },    
-    {
-      nombre: "Ravioles de pollo y verduras 2",
-      imagen: Ravioles6,
-      categoria: "Pastas frescas"
-    },
     {
       nombre: "Sorrentinos de ricota, jamín y muzzarella",
       imagen: Sorrentinos1,
-      categoria: "Pastas frescas"
+      categoria: "Pastas frescas",
+      categoriaGeneral: 'productos generales'
     },
     {
       nombre: "Sorrentinos de pollo y verduras",
       imagen: Sorrentinos2,
-      categoria: "Pastas frescas"
+      categoria: "Pastas frescas",
+      categoriaGeneral: 'productos generales'
     },
     {
       nombre: "tallarines de espinaca",
-      imagen: Tallarines1,
-      categoria: "Fideos"
-    },
-    {
-      nombre: "Tallarines de huevo",
-      imagen: Tallarines2,
-      categoria: "Fideos"
-    },
-    {
-      nombre: "Tallarines de morrones",
-      imagen: Tallarines3,
-      categoria: "Fideos"
+      imagen: Tallarines,
+      categoria: "Fideos",
+      categoriaGeneral: 'productos generales'
     },
     {
       nombre: "Tapa de empanadas",
       imagen: TapaEmpanadas,
-      categoria: "Tapas y discos"
+      categoria: "Tapas y discos",
+      categoriaGeneral: 'productos generales'
     },
     {
       nombre: "Pascualina light",
-      imagen: PascualinaLight,
-      categoria: "Tapas y discos"
-    },
-    {
-      nombre: "Tapa de tartas",
-      imagen: Tartas1,
-      categoria: "Tapas y discos"
-    },
-    {
-      nombre: "Tapa de tarta pascualina",
-      imagen: Tartas2,
-      categoria: "Tapas y discos"
-    },
-    
+      imagen: PanRallado,
+      categoria: "Tapas y discos",
+      categoriaGeneral: 'productos generales'
+    }
     
   ];
 
   // Lógica para agrupar productos por categoría
   const productosPorCategoria = productos.reduce((acc, producto) => {
-    if (!acc[producto.categoria]) {
-      acc[producto.categoria] = [];
+    if (!acc[producto.categoriaGeneral]) {
+      acc[producto.categoriaGeneral] = [];
     }
-    acc[producto.categoria].push(producto);
+    acc[producto.categoriaGeneral].push(producto);
     return acc;
   }, {});
 
@@ -188,20 +170,20 @@ const Testimonios = () => {
         {categorias.map((categoria, categoriaIndex) => (
           <div key={categoria} className={categoriaIndex > 0 ? "mt-14" : ""}>
             {/* Subtítulo de categoría */}
-            <div className="text-center mb-12">
-              <div className="relative inline-block">
+            {/* <div className="text-center mb-12">
+              <div className="relative inline-block"> */}
                 {/* Subtítulo de categoría */}
-                <h3 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-2 relative z-10">
-                  {categoria}
+                {/* <h3 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-2 relative z-10">
+                  {categoria} */}
                   {/* Elementos decorativos laterales centrados con el texto */}
-                  <div className={`absolute -left-8 top-1/2 transform -translate-y-1/2 w-6 h-0.5 ${categoria === 'Pastas frescas' ? 'bg-gradient-to-r from-transparent to-green-600' : categoria === 'Fideos' ? 'bg-gradient-to-r from-transparent to-blue-600' : 'bg-gradient-to-r from-transparent to-red-400'}`}></div>
+                  {/* <div className={`absolute -left-8 top-1/2 transform -translate-y-1/2 w-6 h-0.5 ${categoria === 'Pastas frescas' ? 'bg-gradient-to-r from-transparent to-green-600' : categoria === 'Fideos' ? 'bg-gradient-to-r from-transparent to-blue-600' : 'bg-gradient-to-r from-transparent to-red-400'}`}></div>
                   <div className={`absolute -right-8 top-1/2 transform -translate-y-1/2 w-6 h-0.5 ${categoria === 'Pastas frescas' ? 'bg-gradient-to-l from-transparent to-green-600' : categoria === 'Fideos' ? 'bg-gradient-to-l from-transparent to-blue-600' : 'bg-gradient-to-l from-transparent to-red-400'}`}></div>
-                </h3>
+                </h3> */}
                 
                 {/* Línea decorativa inferior */}
-                <div className={`absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-32 h-0.5 ${categoria === 'Pastas frescas' ? ' bg-gradient-to-r from-green-600 via-transparent to-green-600 rounded-full' : categoria === 'Fideos' ? 'bg-gradient-to-r from-blue-600 via-transparent to-blue-600 rounded-full' : 'bg-gradient-to-r from-red-600 via-transparent to-red-400 rounded-full'}`}></div>
+                {/* <div className={`absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-32 h-0.5 ${categoria === 'Pastas frescas' ? ' bg-gradient-to-r from-green-600 via-transparent to-green-600 rounded-full' : categoria === 'Fideos' ? 'bg-gradient-to-r from-blue-600 via-transparent to-blue-600 rounded-full' : 'bg-gradient-to-r from-red-600 via-transparent to-red-400 rounded-full'}`}></div>
               </div>
-            </div>
+            </div> */}
 
             {/* Testimonials Slider */}
             <div className="relative max-w-6xl mx-auto">
@@ -249,12 +231,24 @@ const Testimonios = () => {
               >
                 {productosPorCategoria[categoria].map((testimonio, index) => (
                   <SwiperSlide key={`${categoria}-${index}`}>
-                    <div className="card-product">
-                      <img
-                        src={testimonio.imagen}
-                        alt={testimonio.nombre}
-                        className="w-full h-full object-cover object-center grayscale-10"
-                      />
+                    <div className="card-product group flex flex-col">
+                      <div className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                        <img
+                          src={testimonio.imagen}
+                          alt={testimonio.nombre}
+                          className="w-full h-64 object-cover object-center transition-transform duration-300 group-hover:scale-105"
+                        />
+                        {/* Overlay sutil al hacer hover */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      </div>
+                      
+                      {/* Nombre del producto */}
+                      <div className="mt-4 text-center flex-shrink-0">
+                        <h3 className="text-lg font-semibold text-gray-900 mb-1 font-serif">
+                          {testimonio.nombre}
+                        </h3>
+                        <div className="w-24 h-0.5 bg-gradient-to-r from-green-500 via-transparent to-green-500 mx-auto rounded-full"></div>
+                      </div>
                     </div>
                   </SwiperSlide>
                 ))}
@@ -282,6 +276,17 @@ const Testimonios = () => {
             background-color: #f3f4f6 !important;
             transform: scale(1.05);
           }
+          /* Estilos para las tarjetas de productos */
+          .card-product {
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+          }
+          .card-product:hover {
+            transform: translateY(-4px);
+          }
+          
         `}</style>
       </div>
     </section>

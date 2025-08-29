@@ -9,10 +9,17 @@ const Contacto = () => {
       <div className="container-custom">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Contáctanos
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <div className="relative inline-block">
+            <h2 className="text-4xl md:text-5xl font-bold mb-1">
+              Contáctanos
+              {/* Elementos decorativos laterales centrados con el texto */}
+              <div className="absolute -left-12 top-1/2 transform -translate-y-1/2 w-10 h-0.5 bg-gradient-to-r from-transparent to-gray-300"></div>
+              <div className="absolute -right-12 top-1/2 transform -translate-y-1/2 w-10 h-0.5 bg-gradient-to-l from-transparent to-gray-300"></div>
+            </h2>
+            {/* Línea decorativa inferior */}
+            <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-48 h-0.5 bg-gradient-to-r from-white via-gray-800 to-white rounded-full shadow-lg"></div>
+          </div>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mt-8">
             ¿Listo para disfrutar de la mejor pasta fresca? Contáctanos y te llevaremos la frescura y calidad de Madomi a tu mesa
           </p>
         </div>
@@ -62,7 +69,7 @@ const Contacto = () => {
                 </div>
                 <div className="text-center md:text-left">
                   <h4 className="font-semibold mb-1">Teléfono</h4>
-                  <p className="text-gray-300">0381 4274562</p>
+                  <p className="text-gray-300">0381 6686081</p>
                   <p className="text-gray-400 text-sm">Lun - Vie, 9:00 - 13:30 |  16:00 - 19:00</p>
                   <p className="text-gray-400 text-sm">Sab, 9:00 - 14:00</p>
                 </div>
