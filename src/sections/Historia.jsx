@@ -9,9 +9,13 @@ import 'swiper/css/navigation';
 // import HistoriaImage2 from '../assets/images/historia2.png';
 
 import VideoEmpresa from '../assets/video/VideoEmpresa.mp4'
+import HistoriaImage1 from '../assets/images/historia.png';
 
 const Historia = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+  const [videoError, setVideoError] = useState(false);
 
   // Contadores dinámicos
   const [statsCounts, setStatsCounts] = useState({
@@ -27,6 +31,30 @@ const Historia = () => {
   // Función para formatear números con separador de miles
   const formatNumber = (num) => {
     return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+  };
+
+  // Manejadores de eventos del video
+  const handleVideoLoadStart = () => {
+    setIsVideoLoaded(false);
+    setVideoError(false);
+  };
+
+  const handleVideoCanPlay = () => {
+    setIsVideoLoaded(true);
+    setVideoError(false);
+  };
+
+  const handleVideoPlay = () => {
+    setIsVideoPlaying(true);
+  };
+
+  const handleVideoPause = () => {
+    setIsVideoPlaying(false);
+  };
+
+  const handleVideoError = () => {
+    setVideoError(true);
+    setIsVideoLoaded(false);
   };
 
   // Datos del slider de historia - SOLO TEXTO AHORA
@@ -65,9 +93,9 @@ const Historia = () => {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          // Reproducir video cuando la sección es visible con un pequeño retraso
+          // Reproducir video cuando la sección es visible y el video está cargado
           setTimeout(() => {
-            if (videoRef.current) {
+            if (videoRef.current && isVideoLoaded && !videoError) {
               videoRef.current.play().catch(error => {
                 console.log('Error reproduciendo video:', error);
               });
@@ -77,7 +105,7 @@ const Historia = () => {
           setIsVisible(false);
           setStatsCounts({ first: 0, second: 0 });
           // Pausar video cuando la sección no es visible
-          if (videoRef.current) {
+          if (videoRef.current && isVideoPlaying) {
             videoRef.current.pause();
           }
         }
@@ -92,7 +120,7 @@ const Historia = () => {
     }
 
     return () => observer.disconnect();
-  }, []);
+  }, [isVideoLoaded, videoError, isVideoPlaying]);
 
   // Animación de contadores cuando cambia el slide o cuando se hace visible
   useEffect(() => {
@@ -185,17 +213,97 @@ const Historia = () => {
             {/* Columna derecha - Video fijo (primera en móviles) */}
             <div className="relative order-1 lg:order-2">
               <div className="relative overflow-hidden rounded-2xl shadow-2xl">
-                <video
-                  ref={videoRef}
-                  src={VideoEmpresa}
-                  preload="auto"
-                  loop
-                  controls
-                  playsInline
-                  className="w-full h-96 object-cover relative z-10"
-                />
+                {/* Spinner dinámico - se muestra hasta que el video se cargue */}
+                <div 
+                  className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
+                    isVideoLoaded && !videoError ? 'opacity-0' : 'opacity-100'
+                  }`}
+                  style={{ zIndex: isVideoLoaded ? 0 : 20 }}
+                >
+                  {/* Fondo con gradiente sutil */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-gray-800 via-gray-900 to-black"></div>
+                  
+                  {/* Spinner principal */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-center">
+                      {/* Spinner circular animado */}
+                      <div className="relative mb-6 animate-float">
+                        {/* Círculo exterior */}
+                        <div className="w-20 h-20 border-4 border-gray-600 rounded-full animate-pulse"></div>
+                        {/* Círculo interior giratorio */}
+                        <div className="absolute top-0 left-0 w-20 h-20 border-4 border-transparent border-t-white rounded-full animate-spin"></div>
+                        {/* Círculo central con efecto de brillo */}
+                        <div className="absolute top-2 left-2 w-16 h-16 bg-white/10 rounded-full backdrop-blur-sm animate-glow"></div>
+                        {/* Punto central */}
+                        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3 h-3 bg-white rounded-full animate-ping"></div>
+                      </div>
+                      
+                      {/* Texto de carga */}
+                      <div className="space-y-3">
+                        <p className="text-white text-lg font-medium tracking-wide">Preparando experiencia</p>
+                        <p className="text-white/80 text-sm">Cargando video de nuestra historia</p>
+                        <div className="flex justify-center space-x-1">
+                          <div className="w-2 h-2 bg-white rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
+                          <div className="w-2 h-2 bg-white rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
+                          <div className="w-2 h-2 bg-white rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Elementos decorativos flotantes */}
+                  <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-white/20 rounded-full animate-pulse"></div>
+                  <div className="absolute top-1/3 right-1/4 w-1 h-1 bg-white/30 rounded-full animate-pulse" style={{ animationDelay: '500ms' }}></div>
+                  <div className="absolute bottom-1/4 left-1/3 w-1.5 h-1.5 bg-white/25 rounded-full animate-pulse" style={{ animationDelay: '1000ms' }}></div>
+                  <div className="absolute bottom-1/3 right-1/3 w-1 h-1 bg-white/20 rounded-full animate-pulse" style={{ animationDelay: '1500ms' }}></div>
+                </div>
+
+                {/* Video - se muestra cuando está cargado */}
+                                 <video
+                   ref={videoRef}
+                   src={VideoEmpresa}
+                   preload="auto"
+                   loop
+                   controls
+                   playsInline
+                   muted
+                   className={`w-full h-96 object-cover transition-opacity duration-700 ease-in-out ${
+                     isVideoLoaded && !videoError ? 'opacity-100' : 'opacity-0'
+                   }`}
+                   style={{ zIndex: isVideoLoaded ? 10 : 0 }}
+                   onLoadedStart={handleVideoLoadStart}
+                   onCanPlay={handleVideoCanPlay}
+                   onPlay={handleVideoPlay}
+                   onPause={handleVideoPause}
+                   onError={handleVideoError}
+                 />
+
                 {/* Overlay sutil - con z-index menor para no tapar controles */}
                 <div className="absolute inset-0 bg-gradient-to-b from-white/20 to-white/30 to-transparent z-0 pointer-events-none"></div>
+
+                {/* Indicador de error si el video falla */}
+                {videoError && (
+                  <div className="absolute inset-0 bg-gray-900/90 flex items-center justify-center z-30">
+                    <div className="text-center text-white p-6">
+                      <svg className="w-16 h-16 text-red-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+                      </svg>
+                      <h3 className="text-xl font-bold mb-2">Error al cargar el video</h3>
+                      <p className="text-gray-300 mb-4">No se pudo cargar el video. La imagen de previsualización permanecerá visible.</p>
+                      <button 
+                        onClick={() => {
+                          setVideoError(false);
+                          if (videoRef.current) {
+                            videoRef.current.load();
+                          }
+                        }}
+                        className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors duration-200"
+                      >
+                        Reintentar
+                      </button>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
 
@@ -406,6 +514,38 @@ const Historia = () => {
           /* Asegurar que el video y sus controles tengan prioridad */
           video {
             z-index: 10 !important;
+          }
+          /* Estilos para la imagen de previsualización */
+          .video-poster {
+            transition: opacity 0.7s ease-in-out;
+          }
+          /* Animación de carga */
+          @keyframes spin {
+            to {
+              transform: rotate(360deg);
+            }
+          }
+          .animate-spin {
+            animation: spin 1s linear infinite;
+          }
+          /* Mejorar la transición del video */
+          .video-transition {
+            transition: opacity 0.7s ease-in-out;
+          }
+          /* Animaciones personalizadas para el spinner */
+          @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+          }
+          @keyframes glow {
+            0%, 100% { box-shadow: 0 0 5px rgba(255,255,255,0.3); }
+            50% { box-shadow: 0 0 20px rgba(255,255,255,0.6); }
+          }
+          .animate-float {
+            animation: float 3s ease-in-out infinite;
+          }
+          .animate-glow {
+            animation: glow 2s ease-in-out infinite;
           }
         `}</style>
       </div>

@@ -21,10 +21,8 @@ const Hero = () => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          console.log('Hero visible');
           setIsVisible(true);
         } else {
-          console.log('Hero no visible');
           setIsVisible(false);
         }
       },
